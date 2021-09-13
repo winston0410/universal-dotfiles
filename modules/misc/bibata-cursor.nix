@@ -6,7 +6,7 @@ username:
     home.packages = with pkgs; [ bibata-cursors ];
 
     home.sessionVariables = {
-      XCURSOR_SIZE = "60";
+      XCURSOR_SIZE = "80";
       XCURSOR_THEME = "Bibata_Ice";
     };
     home.file = {
