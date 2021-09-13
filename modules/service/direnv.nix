@@ -2,10 +2,5 @@ username:
 { config, lib, pkgs, ... }:
 
 {
-
-  home-manager.users.${username} = {
-    programs.direnv = {
-      enable = true;
-    };
-  };
+  dotfiles.programs.direnv = { enable = true; };
 }
