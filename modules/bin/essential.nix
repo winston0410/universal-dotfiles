@@ -51,10 +51,6 @@ in {
       config = { };
     };
 
-    programs.bash.shellAliases = shellAliases;
-
-    programs.zsh.shellAliases = shellAliases;
-
-    programs.fish.shellAliases = shellAliases;
+    dotfiles.terminal.shell.aliases = shellAliases;
   };
 }
