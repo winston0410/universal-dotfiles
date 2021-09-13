@@ -15,7 +15,8 @@ let
     cp = "xcp -r ";
   };
 in {
-
+  dotfiles.terminal.shell.aliases = shellAliases;
+  
   home-manager.users.${username} = {
     home.packages = with pkgs; [
       bandwhich
@@ -50,7 +51,5 @@ in {
       enableFishIntegration = true;
       config = { };
     };
-
-    dotfiles.terminal.shell.aliases = shellAliases;
   };
 }
