@@ -6,6 +6,6 @@ username:
     enable = true;
     package = pkgs.bibata-cursors;
     theme = "Bibata_Ice";
-    size = 80;
+    size = 64;
   };
 }
