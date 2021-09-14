@@ -4,11 +4,10 @@ modules: {
 
     devGuiMinimal = [ modules.gui.brave ];
 
-    devServiceMinimal =
-      [ modules.service.nixos.lorri modules.service.general.direnv ];
+    devServiceMinimal = [ modules.service.nixos.lorri ];
 
     containerMinimal = [ modules.service.nixos.docker ];
-  in rec{
+  in rec {
     devBinaries = devBinariesMinimal ++ [
       modules.bin.lsp
       modules.bin.linter

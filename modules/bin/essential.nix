@@ -16,7 +16,7 @@ let
   };
 in {
   dotfiles.terminal.shell.aliases = shellAliases;
-  
+
   home-manager.users.${username} = {
     home.packages = with pkgs; [
       bandwhich
@@ -39,17 +39,8 @@ in {
       ".gitconfig" = { source = ../../dotfiles/.gitconfig; };
     };
 
-    programs.zoxide = {
-      enable = true;
-      enableZshIntegration = true;
-      enableFishIntegration = true;
-    };
-
-    programs.direnv = {
-      enable = true;
-      enableZshIntegration = true;
-      enableFishIntegration = true;
-      config = { };
-    };
   };
+
+  dotfiles.programs.zoxide = { enable = true; };
+  dotfiles.programs.direnv = { enable = true; };
 }

@@ -31,7 +31,6 @@
     xserver = import ./nixos/xserver.nix;
   };
   service = {
-    general = { direnv = import ./service/direnv.nix; };
     nixos = {
       lorri = import ./service/lorri.nix;
       docker = import ./service/docker.nix;
