@@ -25,6 +25,7 @@
     "home-manager": {
       "inputs": {
         "nixpkgs": [
+          "dotfiles-manager",
           "nixpkgs"
         ]
       },

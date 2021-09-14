@@ -5,7 +5,7 @@ dotfiles-manager: modules: collections: {
         modules.windowManager.leftwm
         modules.multiplexer.tmux
         modules.terminal.wezterm
-        modules.shell.nushell
+        modules.shell.zsh
         modules.bin.neovim
         modules.misc.font
         modules.misc.bibata-cursor
