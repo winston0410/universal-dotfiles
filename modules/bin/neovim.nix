@@ -10,17 +10,18 @@ username:
       "nvim/ftdetect" = { source = ../../dotfiles/nvim/ftdetect; };
     };
 
-    home.sessionVariables = {
-      EDITOR = "nvim";
-      VISUAL = "nvim";
-    };
-
     home.packages = with pkgs; [ neovim ];
   };
 
-  dotfiles.terminal.shell.aliases = {
-    vi = "nvim";
-    vim = "nvim";
-    vimdiff = "nvim -d";
+  dotfiles.terminal.shell = {
+    aliases = {
+      vi = "nvim";
+      vim = "nvim";
+      vimdiff = "nvim -d";
+    };
+    variables = {
+      EDITOR = "nvim";
+      VISUAL = "nvim";
+    };
   };
 }
