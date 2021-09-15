@@ -16,7 +16,7 @@ username:
     xsession = {
       enable = true;
       initExtra = ''
-        source $HOME/.config/leftwm/themes/current/up
+        source $HOME/.config/leftwm/themes/current/up &> /tmp/upout
       '';
     };
   };
