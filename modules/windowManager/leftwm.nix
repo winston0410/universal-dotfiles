@@ -6,11 +6,11 @@ username:
     configPath = ../../dotfiles/leftwm/config.toml;
   };
 
-  # home-manager.users.${username} = {
-    # xdg.configFile = {
-      # "leftwm/themes/current" = {
-        # source = ../../dotfiles/leftwm/themes/current;
-      # };
-    # };
-  # };
+  home-manager.users.${username} = {
+    xdg.configFile = {
+      "leftwm/themes/current" = {
+        source = ../../dotfiles/leftwm/themes/current;
+      };
+    };
+  };
 }
