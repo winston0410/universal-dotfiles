@@ -8,7 +8,9 @@ username:
 
   home-manager.users.${username} = {
     xdg.configFile = {
-      "leftwm/themes" = { source = ../../dotfiles/leftwm/themes; };
+      "leftwm/themes/current" = {
+        source = ../../dotfiles/leftwm/themes/current;
+      };
     };
   };
 }
