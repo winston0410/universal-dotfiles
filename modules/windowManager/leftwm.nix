@@ -13,11 +13,11 @@ username:
       };
     };
 
-    xsession = {
-      enable = true;
+    # xsession = {
+      # enable = true;
       # initExtra = ''
-        # source $HOME/.config/leftwm/themes/current/up &> /tmp/upout
+      # source $HOME/.config/leftwm/themes/current/up &> /tmp/upout
       # '';
-    };
+    # };
   };
 }
