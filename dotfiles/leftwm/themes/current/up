@@ -1,1 +1,4 @@
+#! /usr/bin/env nix-shell
+#! nix-shell -i bash
+
 leftwm-command "LoadTheme $HOME/.config/leftwm/themes/current/theme.toml"
