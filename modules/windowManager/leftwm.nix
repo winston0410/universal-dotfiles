@@ -8,16 +8,9 @@ username:
 
   home-manager.users.${username} = {
     xdg.configFile = {
-      "leftwm/themes/current" = {
-        source = ../../dotfiles/leftwm/themes/current;
+      "leftwm/themes/current/theme.toml" = {
+        source = ../../dotfiles/leftwm/themes/current/theme.toml;
       };
-    };
-
-    xsession = {
-      enable = true;
-      initExtra = ''
-        source $HOME/.config/leftwm/themes/current/up 2> /tmp/upout
-      '';
     };
   };
 }
