@@ -12,5 +12,12 @@ username:
         source = ../../dotfiles/leftwm/themes/current;
       };
     };
+
+    xsession = {
+      enable = true;
+      initExtra = ''
+        source $HOME/.config/leftwm/themes/current/up
+      '';
+    };
   };
 }
