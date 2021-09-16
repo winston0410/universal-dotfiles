@@ -3,4 +3,6 @@ leftwm command "UnloadTheme"
 
 leftwm command "LoadTheme $HOME/.config/leftwm/themes/current/theme.toml"
 
-feh --bg-scale ./wallpaper.jpg
+if [ -x "$(command -v feh)" ]; then
+  feh --bg-scale "$HOME/.config/leftwm/themes/current/wallpaper.jpg"
+fi
