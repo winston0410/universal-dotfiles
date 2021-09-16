@@ -4,7 +4,8 @@ username:
 {
   home-manager.users.${username} = {
     home.packages = with pkgs; [
-      cmake-language-server
+      # For unknown reason it cant be built
+      # cmake-language-server
       rust-analyzer
       gopls
       rnix-lsp
@@ -47,7 +48,7 @@ username:
       terraform-ls
       solargraph
       metals
-      # nodePackages.vscode-langservers-extracted
+      nodePackages.vscode-langservers-extracted
       # nodePackages.graphql-language-service-cli
       # nodePackages."@angular/language-server"
       # nodePackages."@prisma/language-server"
