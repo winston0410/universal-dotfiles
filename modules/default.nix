@@ -1,5 +1,6 @@
 {
   windowManager = { leftwm = import ./windowManager/leftwm.nix; };
+  bar = { eww = import ./bar/eww.nix; };
   terminal = {
     wezterm = import ./terminal/wezterm.nix;
     alacritty = import ./terminal/alacritty.nix;
