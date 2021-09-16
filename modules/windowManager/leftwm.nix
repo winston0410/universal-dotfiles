@@ -7,10 +7,11 @@ username:
   };
 
   home-manager.users.${username} = {
-    # xdg.configFile = {
-      # "leftwm/themes/current/theme.toml" = {
-        # source = ../../dotfiles/leftwm/themes/current/theme.toml;
-      # };
-    # };
+    home.packages = [ pkgs.feh ];
+    xdg.configFile = {
+      "leftwm/themes/current/" = {
+        source = ../../dotfiles/leftwm/themes/current;
+      };
+    };
   };
 }

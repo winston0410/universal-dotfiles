@@ -1,4 +1,6 @@
-#! /usr/bin/env nix-shell
-#! nix-shell -i bash
+#! /usr/bin/env bash
+leftwm command "UnloadTheme"
 
-leftwm-command "LoadTheme $HOME/.config/leftwm/themes/current/theme.toml"
+leftwm command "LoadTheme $HOME/.config/leftwm/themes/current/theme.toml"
+
+feh --bg-scale ./wallpaper.jpg
