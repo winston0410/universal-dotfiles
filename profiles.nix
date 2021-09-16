@@ -8,6 +8,7 @@ dotfiles-manager: modules: collections: {
         modules.terminal.wezterm
         modules.shell.zsh
         modules.bin.neovim
+        modules.bin.nix-direnv
         modules.misc.font
         modules.misc.bibata-cursor
       ]));

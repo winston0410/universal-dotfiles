@@ -17,6 +17,8 @@
     linter = import ./bin/linter.nix;
     compiler = import ./bin/compiler.nix;
     essential = import ./bin/essential.nix;
+    direnv = import ./bin/direnv.nix;
+    nix-direnv = import ./bin/nix-direnv.nix;
   };
   misc = {
     bibata-cursor = import ./misc/bibata-cursor.nix;

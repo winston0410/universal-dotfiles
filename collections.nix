@@ -4,7 +4,9 @@ modules: {
 
     devGuiMinimal = [ modules.gui.brave ];
 
-    devServiceMinimal = [ modules.service.nixos.lorri ];
+    # Ditch lorri
+    # modules.service.nixos.lorri
+    devServiceMinimal = [ ];
 
     containerMinimal = [ modules.service.nixos.docker ];
   in rec {

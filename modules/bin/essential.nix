@@ -42,5 +42,4 @@ in {
   };
 
   dotfiles.programs.zoxide = { enable = true; };
-  dotfiles.programs.direnv = { enable = true; };
 }
