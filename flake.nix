@@ -9,7 +9,10 @@
     };
     dotfiles-manager = {
       url = "github:winston0410/dotfiles-manager/master";
-      inputs = { nixpkgs.follows = "nixpkgs"; };
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+      };
     };
   };
 

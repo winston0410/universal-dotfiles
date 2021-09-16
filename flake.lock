@@ -2,17 +2,19 @@
   "nodes": {
     "dotfiles-manager": {
       "inputs": {
-        "home-manager": "home-manager",
+        "home-manager": [
+          "home-manager"
+        ],
         "nixpkgs": [
           "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1631799329,
-        "narHash": "sha256-hXwl2/B2cXpRzjQ+UfGQToFyqvTqsHviqiT6FohTo1c=",
+        "lastModified": 1631828085,
+        "narHash": "sha256-cwjA2xCYsKAkELi9hiyej9JIEuaj7jFVUySgDZwGJlc=",
         "owner": "winston0410",
         "repo": "dotfiles-manager",
-        "rev": "38f7fedf9c24a64c2c416cae0c4bd3a7ca42db4a",
+        "rev": "e6e8ebd13efad33a0f5bbb09fddffc2b8630cb0d",
         "type": "github"
       },
       "original": {
@@ -23,27 +25,6 @@
       }
     },
     "home-manager": {
-      "inputs": {
-        "nixpkgs": [
-          "dotfiles-manager",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1631485157,
-        "narHash": "sha256-U2qv2tjrWpTWe1KPUPXEcByOdnTBlJWX/Bhk7Ax5mgA=",
-        "owner": "nix-community",
-        "repo": "home-manager",
-        "rev": "208e310e9409d0d54ae5e19cb52f8d0f3c7f4771",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "home-manager",
-        "type": "github"
-      }
-    },
-    "home-manager_2": {
       "inputs": {
         "nixpkgs": [
           "nixpkgs"
@@ -82,7 +63,7 @@
     "root": {
       "inputs": {
         "dotfiles-manager": "dotfiles-manager",
-        "home-manager": "home-manager_2",
+        "home-manager": "home-manager",
         "nixpkgs": "nixpkgs"
       }
     }
