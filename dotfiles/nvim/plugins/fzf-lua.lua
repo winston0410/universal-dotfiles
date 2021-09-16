@@ -4,9 +4,17 @@ local function init(use)
 		requires = {
 			"vijaymarupudi/nvim-fzf",
 			"kyazdani42/nvim-web-devicons",
-		}, -- optional for icons
+		},
 		config = function()
 			local actions = require("fzf-lua.actions")
+
+			--  Get the git root, falling back to the cwd
+			--  Inspired here, https://github.com/ibhagwan/fzf-lua/issues/140
+			local function getCwd()
+				local path = require("fzf-lua.path").git_root(vim.loop.cwd(), true) or vim.loop.cwd()
+				return { cwd = path }
+			end
+
 			require("fzf-lua").setup({
 				winopts = {
 					win_height = 1,
@@ -29,25 +37,30 @@ local function init(use)
 			})
 
 			for _, mode in ipairs({ "n", "v" }) do
-				vim.api.nvim_set_keymap(mode, ",m", "<cmd>lua require('fzf-lua').files()<cr>", {
+				vim.api.nvim_set_keymap(mode, ",m", "<cmd>lua require('fzf-lua').files(" .. getCwd() .. ")<cr>", {
 					silent = true,
 					noremap = true,
 				})
 
-				vim.api.nvim_set_keymap(mode, ",pm", "<cmd>lua require('fzf-lua').files_resume()<cr>", {
+				vim.api.nvim_set_keymap(mode, ",pm", "<cmd>lua require('fzf-lua').files_resume(" .. getCwd() .. ")<cr>", {
 					silent = true,
 					noremap = true,
 				})
 
-				vim.api.nvim_set_keymap(mode, ",g", "<cmd>lua require('fzf-lua').live_grep()<cr>", {
+				vim.api.nvim_set_keymap(mode, ",g", "<cmd>lua require('fzf-lua').live_grep(" .. getCwd() .. ")<cr>", {
 					silent = true,
 					noremap = true,
 				})
 
-				vim.api.nvim_set_keymap(mode, ",pg", "<cmd>lua require('fzf-lua').live_grep_resume()<cr>", {
-					silent = true,
-					noremap = true,
-				})
+				vim.api.nvim_set_keymap(
+					mode,
+					",pg",
+					"<cmd>lua require('fzf-lua').live_grep_resume(" .. getCwd() .. ")<cr>",
+					{
+						silent = true,
+						noremap = true,
+					}
+				)
 
 				vim.api.nvim_set_keymap(mode, ",a", "<cmd>lua require('fzf-lua').lsp_code_actions()<cr>", {
 					silent = true,
