@@ -3,10 +3,17 @@ local wezterm = require("wezterm")
 local hostname = wezterm.hostname()
 
 return {
-	default_prog = { --[[dotfile-manager--]] },
+	default_prog = { --[[dotfile-manager--]]
+	},
 	font = wezterm.font("Hack Nerd Font", { weight = "Regular", italic = false }),
 	font_size = 30.0,
 	enable_tab_bar = false,
+	window_padding = {
+		left = 5,
+		right = 5,
+		top = 5,
+		bottom = 5,
+	},
 	color_scheme = "tokyonight_night",
 	color_schemes = {
 		tokyonight_storm = {

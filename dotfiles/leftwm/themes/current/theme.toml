@@ -3,7 +3,20 @@ default_border_color = '#feebb3'
 focused_border_color = '#fcbe03'
 border_width = 0
 margin = 10
+workspace_margin = 0
 
 [[gutter]]
 side = "Top"
 value = 20
+
+[[gutter]]
+side = "Left"
+value = 10
+
+[[gutter]]
+side = "Right"
+value = 10
+
+[[gutter]]
+side = "Bottom"
+value = 10
