@@ -1,7 +1,7 @@
 username:
 { pkgs, config, ... }: {
   dotfiles.xserver.bar = {
-    enable = true;
+    enable = false;
     package = (pkgs.callPackage ./eww_derivation.nix {});
   };
 
