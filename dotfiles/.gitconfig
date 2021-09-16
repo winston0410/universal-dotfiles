@@ -12,3 +12,5 @@
 	ff = no
 [pull]
 	ff = yes
+[init]
+    defaultBranch = develop
