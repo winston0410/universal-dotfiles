@@ -35,7 +35,8 @@ local function init(use)
 				fzf_layout = "reverse-list",
 				files = {
 					prompt = "Fd❯ ",
-					cmd = "fd",
+                    --  Cannot set the cmd explicitly, as fzf-lua would not customize it further for you. Default to fd anyway
+					--  cmd = "fd",
 					git_icons = true, -- show git icons?
 					file_icons = true, -- show file icons?
 					color_icons = true, -- colorize file|git icons
