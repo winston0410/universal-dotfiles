@@ -103,7 +103,7 @@ key = "XF86XK_MonBrightnessUp"
 
 [[keybind]]
 command = "Execute"
-value = "screenshot"
+value = "maim $HOME/$(date +%s).jpg"
 modifier = []
 key = "XF86XK_LaunchA"
 
