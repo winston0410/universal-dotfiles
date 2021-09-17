@@ -5,6 +5,7 @@ dotfiles-manager: modules: collections: {
         modules.windowManager.leftwm
         # modules.bar.eww
         modules.service.nixos.hydra
+        modules.bin.menyoki
         modules.multiplexer.tmux
         modules.terminal.wezterm
         modules.shell.zsh

@@ -19,6 +19,7 @@
     essential = import ./bin/essential.nix;
     direnv = import ./bin/direnv.nix;
     nix-direnv = import ./bin/nix-direnv.nix;
+    menyoki = import ./bin/menyoki.nix;
   };
   misc = {
     bibata-cursor = import ./misc/bibata-cursor.nix;
