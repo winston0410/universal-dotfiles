@@ -4,6 +4,7 @@ dotfiles-manager: modules: collections: {
       (collections.user.devMachine ++ collections.system.guiSystemMinimal ++ [
         modules.windowManager.leftwm
         # modules.bar.eww
+        modules.service.nixos.hydra
         modules.multiplexer.tmux
         modules.terminal.wezterm
         modules.shell.zsh
