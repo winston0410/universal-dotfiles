@@ -12,8 +12,8 @@ local function init(use)
 		-- after = "nvim-treesitter",
 	})
 	use({
-		-- "nvim-treesitter/nvim-treesitter",
-		"winston0410/nvim-treesitter",
+		"nvim-treesitter/nvim-treesitter",
+		--  "winston0410/nvim-treesitter",
 		-- branch = "0.5-compat",
 		run = function()
 			-- vim.cmd(

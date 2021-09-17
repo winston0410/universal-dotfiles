@@ -1,6 +1,20 @@
---  Avoid error here by implementing the function in config()
-local searchFiles = nil
-local liveGrep = nil
+--  Potential issue here when reinstalling
+local function getCwd()
+	local path = require("fzf-lua.path").git_root(vim.loop.cwd(), true) or vim.loop.cwd()
+	return { cwd = path }
+end
+
+local searchFiles = function()
+	local opts = getCwd()
+
+	require("fzf-lua").files(opts)
+end
+
+local liveGrep = function()
+	local opts = getCwd()
+
+	require("fzf-lua").live_grep(opts)
+end
 
 local function init(use)
 	use({
@@ -11,23 +25,6 @@ local function init(use)
 		},
 		config = function()
 			local actions = require("fzf-lua.actions")
-
-			local function getCwd()
-				local path = require("fzf-lua.path").git_root(vim.loop.cwd(), true) or vim.loop.cwd()
-				return { cwd = path }
-			end
-
-			local searchFiles = function()
-				local opts = getCwd()
-
-				require("fzf-lua").files(opts)
-			end
-
-			local liveGrep = function()
-				local opts = getCwd()
-
-				require("fzf-lua").live_grep(opts)
-			end
 
 			require("fzf-lua").setup({
 				winopts = {
