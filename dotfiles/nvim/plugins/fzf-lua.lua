@@ -2,7 +2,6 @@
 local function getCwd()
 	local path = require("fzf-lua.path").git_root(vim.loop.cwd(), true) or vim.loop.cwd()
 	local header = ('--header="cwd = %s"'):format(vim.fn.shellescape(path))
-	print("chek path", path)
 	return { cwd = path, fzf_cli_args = header }
 end
 
