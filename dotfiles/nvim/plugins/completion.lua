@@ -4,7 +4,8 @@ local function init(paq)
 		event = "InsertEnter",
 		requires = {
 			{ "hrsh7th/vim-vsnip", event = "InsertCharPre" },
-			{ "winston0410/friendly-snippets", event = "InsertCharPre" },
+			{ "rafamadriz/friendly-snippets", event = "InsertCharPre" },
+			--  { "winston0410/friendly-snippets", event = "InsertCharPre" },
 		},
 		config = function()
 			vim.o.completeopt = "menuone,noselect"
