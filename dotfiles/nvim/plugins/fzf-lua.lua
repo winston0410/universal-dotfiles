@@ -1,16 +1,18 @@
 --  Potential issue here when reinstalling
 local function getCwd()
 	local path = require("fzf-lua.path").git_root(vim.loop.cwd(), true) or vim.loop.cwd()
-	return { cwd = path }
+	local header = ('--header="cwd = %s"'):format(vim.fn.shellescape(path))
+	print("chek path", path)
+	return { cwd = path, fzf_cli_args = header }
 end
 
-local searchFiles = function()
+local function searchFiles()
 	local opts = getCwd()
 
 	require("fzf-lua").files(opts)
 end
 
-local liveGrep = function()
+local function liveGrep()
 	local opts = getCwd()
 
 	require("fzf-lua").live_grep(opts)
@@ -52,7 +54,7 @@ local function init(use)
 					silent = true,
 					noremap = true,
 				})
-
+                
 				vim.api.nvim_set_keymap(mode, ",pm", "<cmd>lua require('fzf-lua').files_resume()<cr>", {
 					silent = true,
 					noremap = true,
