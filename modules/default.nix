@@ -20,6 +20,7 @@
     direnv = import ./bin/direnv.nix;
     nix-direnv = import ./bin/nix-direnv.nix;
     menyoki = import ./bin/menyoki.nix;
+    maim = import ./bin/maim.nix;
   };
   misc = {
     bibata-cursor = import ./misc/bibata-cursor.nix;
