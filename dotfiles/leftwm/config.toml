@@ -101,6 +101,12 @@ value = "light -A 2"
 modifier = []
 key = "XF86XK_MonBrightnessUp"
 
+[[keybind]]
+command = "Execute"
+value = "screenshot"
+modifier = []
+key = "XF86XK_LaunchA"
+
 # [[keybind]]
 # command = "Execute"
 # value = "xdotool key --clearmodifiers Down"
