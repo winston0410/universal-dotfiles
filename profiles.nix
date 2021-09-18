@@ -11,6 +11,7 @@ dotfiles-manager: modules: collections: {
         modules.shell.zsh
         modules.bin.neovim
         modules.bin.nix-direnv
+        modules.gui.telegram
         modules.misc.font
         modules.misc.bibata-cursor
       ]));

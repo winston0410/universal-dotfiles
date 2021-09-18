@@ -27,7 +27,8 @@
     font = import ./misc/font.nix;
   };
   gui = {
-    # vscode = import ./hm/vscode.nix;
+    vscode = import ./gui/vscode.nix;
+    telegram = import ./gui/telegram.nix;
     brave = import ./gui/brave.nix;
     insomnia = import ./gui/insomnia.nix;
   };
