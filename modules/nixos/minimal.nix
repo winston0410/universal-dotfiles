@@ -24,7 +24,18 @@ username:
     '';
     binaryCaches = [ "https://cache.nixos.org" ];
     trustedBinaryCaches = [ "http://cache.nixos.org" "http://hydra.nixos.org" ];
+    trustedUsers = [ "@wheel" ];
+    allowedUsers = [ "@wheel" ];
+    sshServe = {
+      enable = false;
+      keys = [ ];
+    };
+    readOnlyStore = true;
     autoOptimiseStore = true;
+    optimise = {
+      automatic = true;
+      dates = [ "12:00" ];
+    };
     gc = {
       automatic = true;
       dates = "weekly";
@@ -35,7 +46,13 @@ username:
   networking = {
     useDHCP = false;
     firewall = { enable = false; };
-    networkmanager = { enable = true; };
+    networkmanager = {
+      enable = true;
+      wifi = { powersave = true; };
+      connectionConfig = {
+
+      };
+    };
   };
 
   powerManagement = {
