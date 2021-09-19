@@ -13,6 +13,8 @@ end
 vim.g.mapleader = " "
 local modes = { "n", "v" }
 local mappings = {
+    --  Disable popup for commandline
+	{ "q:", '<NOP>' },
 	{ "<leader>y", '"+y' },
 	{ "<leader>p", '"+p' },
 	{ "<leader>P", '"+P' },
