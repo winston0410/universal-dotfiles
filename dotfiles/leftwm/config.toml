@@ -14,6 +14,12 @@ key = "m"
 
 [[keybind]]
 command = "Execute"
+value = "telegram-desktop"
+modifier = ["modkey"]
+key = "t"
+
+[[keybind]]
+command = "Execute"
 value = "insomnia"
 modifier = ["modkey"]
 key = "j"
