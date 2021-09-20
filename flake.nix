@@ -21,7 +21,7 @@
   };
 
   outputs = { self, nixpkgs, home-manager, dotfiles-manager, eww, ... }: rec {
-    overlay = final: prev: { "${eww.packages.eww.pname}" = eww.packages.eww; };
+    # overlay = final: prev: { "${eww.packages.eww.pname}" = eww.packages.eww; };
 
     # nixosModule = { pkgs, ... }: { nixpkgs.overlays = [ self.overlay ]; };
 
