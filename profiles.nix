@@ -3,7 +3,7 @@ dotfiles-manager: modules: collections: {
     macbook2017 = (dotfiles-manager.lib.createProfile
       (collections.user.devMachine ++ collections.system.guiSystemMinimal ++ [
         modules.windowManager.leftwm
-        modules.bar.eww
+        # modules.bar.eww
         modules.service.nixos.hydra
         modules.bin.maim
         modules.multiplexer.tmux
