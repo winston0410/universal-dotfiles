@@ -10,11 +10,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1632162888,
-        "narHash": "sha256-zgcqb6tvNCugLkUfsSAiGT+fMMXT3rErtZTW/pmpgbg=",
+        "lastModified": 1632172507,
+        "narHash": "sha256-JqqKAX9owB8r0BPzyjUewARAELAoCRWQes3uJOO4jbM=",
         "owner": "winston0410",
         "repo": "dotfiles-manager",
-        "rev": "30d8f9720ea7aba1971e2534c5fb14e0700a5027",
+        "rev": "5e86a3428a9fd8a1786982fcc1e57f3cbbfe054f",
         "type": "github"
       },
       "original": {
