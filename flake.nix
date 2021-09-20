@@ -14,21 +14,17 @@
         home-manager.follows = "home-manager";
       };
     };
-    # eww = {
-      # url = "github:elkowar/eww/master";
-      # inputs = { nixpkgs.follows = "nixpkgs"; };
-    # };
+    eww = {
+      url = "github:elkowar/eww/master";
+      inputs = { nixpkgs.follows = "nixpkgs"; };
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, dotfiles-manager, ... }: rec {
-    # overlay = final: prev: { "${eww.packages.eww.pname}" = eww.packages.eww; };
-
-    # nixosModule = { pkgs, ... }: { nixpkgs.overlays = [ self.overlay ]; };
-
+  outputs = inputs: rec {
     modules = import ./modules/default.nix;
 
     collections = (import ./collections.nix) modules;
 
-    profiles = (import ./profiles.nix) dotfiles-manager modules collections;
+    profiles = (import ./profiles.nix) { inherit modules collections inputs; };
   };
 }
