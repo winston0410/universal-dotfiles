@@ -1,4 +1,3 @@
-username:
 { config, lib, pkgs, ... }:
 
 {
