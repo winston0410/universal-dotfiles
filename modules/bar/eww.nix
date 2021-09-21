@@ -5,8 +5,8 @@ let
   overlay = final: prev: { "eww" = inputs.eww.packages.${system}.eww; };
 in {
   nixpkgs.overlays = [ overlay ];
-  environment.systemPackages = [ pkgs.eww ];
-
+  
+  home-manager.users.${username} = { home.packages = with pkgs; [pkgs.eww]; };
   # dotfiles.xserver.bar = {
   # enable = false;
   # package = pkgs.eww;
