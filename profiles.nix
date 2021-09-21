@@ -3,6 +3,7 @@
     dev = (inputs.dotfiles-manager.lib.mkProfile {
       modules = (collections.user.devMachine ++ [
         # TODO: remove this. Should not introduce xserver here
+        modules.bar.eww
         modules.nixos.xserver
         modules.windowManager.leftwm
         modules.service.nixos.hydra
