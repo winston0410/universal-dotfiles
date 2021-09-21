@@ -19,10 +19,8 @@
   # make the system here, so that the inputs of universal dotfiles will be used
   nixos = (inputs.dotfiles-manager.lib.mkSystem {
     inherit inputs;
-    modules = [
-      collections.system.guiSystemMinimal
-      inputs.home-manager.nixosModules.home-manager
-    ];
+    modules = [ inputs.home-manager.nixosModules.home-manager ]
+      ++ collections.system.guiSystemMinimal;
     system = "x86_64-linux";
   });
 }
