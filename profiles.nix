@@ -23,4 +23,7 @@
       ++ collections.system.guiSystemMinimal;
     system = "x86_64-linux";
   });
+
+  # Export the builder function directly for debugging
+  debug = inputs.dotfiles-manager.lib.mkSystem;
 }
