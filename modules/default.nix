@@ -22,11 +22,14 @@
     menyoki = import ./bin/menyoki.nix;
     maim = import ./bin/maim.nix;
     ssh = import ./bin/ssh.nix;
+    gpg = import ./bin/gpg.nix;
+    npm = import ./bin/npm.nix;
   };
   misc = {
     bibata-cursor = import ./misc/bibata-cursor.nix;
     font = import ./misc/font.nix;
     keys = import ./misc/keys.nix;
+    xdg = import ./misc/xdg.nix;
   };
   gui = {
     vscode = import ./gui/vscode.nix;
