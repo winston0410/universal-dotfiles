@@ -31,6 +31,7 @@
     telegram = import ./gui/telegram.nix;
     brave = import ./gui/brave.nix;
     insomnia = import ./gui/insomnia.nix;
+    discord = import ./gui/discord.nix;
   };
   nixos = {
     config = { minimal = import ./nixos/minimal.nix; };
