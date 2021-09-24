@@ -33,6 +33,7 @@
         formatter = modules.bin.formatter;
         linter = modules.bin.linter;
         neovim = modules.bin.neovim;
+        keys = modules.misc.keys;
       };
 
       namedModules = {
