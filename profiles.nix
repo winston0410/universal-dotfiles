@@ -13,8 +13,7 @@
 
   home = {
     dev = (inputs.dotfiles-manager.lib.mkProfile {
-      modules = { 
-      };
+      modules = { };
 
       hmModules = {
         dotfiles-manager = inputs.dotfiles-manager.options;
@@ -35,6 +34,8 @@
         neovim = modules.bin.neovim;
         keys = modules.misc.keys;
         ssh = modules.bin.ssh;
+        xdg = modules.misc.xdg;
+        npm = modules.misc.npm;
       };
 
       namedModules = {
