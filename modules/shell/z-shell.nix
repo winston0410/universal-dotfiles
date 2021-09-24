@@ -1,8 +1,7 @@
-_:
 { pkgs, config, ... }: {
-  dotfiles.terminal.shell = {
-    enable = true;
-    package = pkgs.zsh;
-    configPath = ../../dotfiles/.zshrc;
+  home.packages = [ pkgs.zsh ];
+
+  home.file = {
+    ".zshrc" = { text = (builtins.readFile ../../dotfiles/.zshrc); };
   };
 }

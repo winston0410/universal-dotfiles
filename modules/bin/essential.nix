@@ -1,4 +1,3 @@
-username:
 { pkgs, config, ... }:
 
 let
@@ -15,31 +14,34 @@ let
     cp = "xcp -r ";
   };
 in {
-  dotfiles.terminal.shell.aliases = shellAliases;
 
-  home-manager.users.${username} = {
-    home.packages = with pkgs; [
-      bandwhich
-      git
-      bat
-      fzf
-      fd
-      ripgrep
-      rm-improved
-      tre-command
-      dua
-      procs
-      xcp
-      bottom
-      lsd
-    ];
+  home.packages = with pkgs; [
+    bandwhich
+    git
+    bat
+    fzf
+    fd
+    ripgrep
+    rm-improved
+    tre-command
+    dua
+    procs
+    xcp
+    bottom
+    lsd
+  ];
 
-    home.file = {
-      "fzf-color.sh" = { source = ../../dotfiles/fzf-color.sh; };
-      ".gitconfig" = { source = ../../dotfiles/.gitconfig; };
-    };
-
+  home.file = {
+    "fzf-color.sh" = { source = ../../dotfiles/fzf-color.sh; };
+    ".gitconfig" = { source = ../../dotfiles/.gitconfig; };
   };
 
-  dotfiles.programs.zoxide = { enable = true; };
+  programs.zoxide = {
+    enable = true;
+    enableBashIntegration = true;
+    enableFishIntegration = true;
+    enableZshIntegration = true;
+  };
+
+  dotfiles-manager.shellAliases = shellAliases;
 }

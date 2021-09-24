@@ -8,7 +8,7 @@
       inputs = { nixpkgs.follows = "nixpkgs"; };
     };
     dotfiles-manager = {
-      url = "github:winston0410/dotfiles-manager/master";
+      url = "path:/home/hugosum/dotfiles-manager";
       inputs = {
         nixpkgs.follows = "nixpkgs";
         home-manager.follows = "home-manager";
