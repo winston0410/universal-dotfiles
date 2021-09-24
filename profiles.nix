@@ -34,6 +34,7 @@
         linter = modules.bin.linter;
         neovim = modules.bin.neovim;
         keys = modules.misc.keys;
+        ssh = modules.bin.ssh;
       };
 
       namedModules = {

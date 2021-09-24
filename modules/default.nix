@@ -21,10 +21,12 @@
     nix-direnv = import ./bin/nix-direnv.nix;
     menyoki = import ./bin/menyoki.nix;
     maim = import ./bin/maim.nix;
+    ssh = import ./bin/ssh.nix;
   };
   misc = {
     bibata-cursor = import ./misc/bibata-cursor.nix;
     font = import ./misc/font.nix;
+    keys = import ./misc/keys.nix;
   };
   gui = {
     vscode = import ./gui/vscode.nix;
