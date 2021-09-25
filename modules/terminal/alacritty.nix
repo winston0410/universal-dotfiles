@@ -1,7 +1,11 @@
-_: { pkgs, config, ... }: {
-  dotfiles.terminal.emulator = {
-    enable = true;
-    package = pkgs.alacritty;
-    configPath = ../../dotfiles/alacritty/alacritty.yml;
+{ pkgs, config, ... }:
+
+{
+  home.packages = with pkgs; [ alacritty ];
+
+  xdg.configFile = {
+    "alacritty/alacritty.yml" = {
+      text = (builtins.readFile ../../dotfiles/alacritty/alacritty.yml);
+    };
   };
 }

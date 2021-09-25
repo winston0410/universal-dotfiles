@@ -21,16 +21,24 @@
     nix-direnv = import ./bin/nix-direnv.nix;
     menyoki = import ./bin/menyoki.nix;
     maim = import ./bin/maim.nix;
+    ssh = import ./bin/ssh.nix;
+    gpg = import ./bin/gpg.nix;
+    npm = import ./bin/npm.nix;
+    cargo = import ./bin/cargo.nix;
   };
   misc = {
     bibata-cursor = import ./misc/bibata-cursor.nix;
     font = import ./misc/font.nix;
+    keys = import ./misc/keys.nix;
+    xdg = import ./misc/xdg.nix;
+    lang = import ./misc/lang.nix;
   };
   gui = {
     vscode = import ./gui/vscode.nix;
     telegram = import ./gui/telegram.nix;
     brave = import ./gui/brave.nix;
     insomnia = import ./gui/insomnia.nix;
+    discord = import ./gui/discord.nix;
   };
   nixos = {
     config = { minimal = import ./nixos/minimal.nix; };

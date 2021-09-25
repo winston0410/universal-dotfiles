@@ -1,6 +1,10 @@
-username:
 { pkgs, ... }:
 
 {
-  dotfiles.programs.direnv = { enable = true; };
+  programs.direnv = {
+    enable = true;
+    enableBashIntegration = true;
+    enableZshIntegration = true;
+    enableFishIntegration = true;
+  };
 }

@@ -1,25 +1,21 @@
-_: { pkgs, config, ... }: {
-  dotfiles.terminal.multiplexer = {
+{ pkgs, lib, config, ... }:
+
+let
+  shell = pkgs.zsh;
+  getBinPath = pkg:
+    "${pkg}${
+      if (builtins.hasAttr "shellPath" pkg) then
+        pkg.shellPath
+      else
+        "/bin/${pkg.pname}"
+    }";
+in {
+  programs.tmux = {
     enable = true;
-    package = pkgs.tmux;
-    configPath = ../../dotfiles/.tmux.conf;
+    extraConfig = (builtins.readFile ../../dotfiles/.tmux.conf);
+    sensibleOnTop = false;
+    # Not sure why getOutput doesn't work
+    # shell = "${(lib.attrsets.getOutput "bin" shell)}";
+    shell = getBinPath shell;
   };
 }
-
-# shell: username:
-# { pkgs, config, ... }:
-
-# let shellName = (builtins.parseDrvName shell).name;
-# in {
-  # home-manager.users.${username} = {
-    # home.packages = with pkgs; [ tmux ];
-
-    # home.file = {
-      # ".tmux.conf" = {
-        # text = (builtins.readFile ../../dotfiles/.tmux.conf) + ''
-          # set -g default-shell ${shell}/bin/${shellName}  
-        # '';
-      # };
-    # };
-  # };
-# }

@@ -60,7 +60,3 @@ zinit wait lucid light-mode for \
 	#  Disable fzf keybindings here as it is now set in nix
 	#  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 	source ./fzf-color.sh
-
-#  Workaround as home-manager not working
-eval "$(direnv hook zsh)"
-eval "$(zoxide init zsh)"

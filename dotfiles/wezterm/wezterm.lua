@@ -3,8 +3,7 @@ local wezterm = require("wezterm")
 local hostname = wezterm.hostname()
 
 return {
-	default_prog = { --[[dotfile-manager--]]
-	},
+	default_prog = { "tmux" },
 	font = wezterm.font("Hack Nerd Font", { weight = "Regular", italic = false }),
 	font_size = 30.0,
 	enable_tab_bar = false,

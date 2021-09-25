@@ -1,4 +1,3 @@
-username:
 { pkgs, config, ... }:
 
 let
@@ -13,33 +12,44 @@ let
     top = "btm";
     ps = "procs";
     cp = "xcp -r ";
+    cat = "bat";
   };
 in {
-  dotfiles.terminal.shell.aliases = shellAliases;
 
-  home-manager.users.${username} = {
-    home.packages = with pkgs; [
-      bandwhich
-      git
-      bat
-      fzf
-      fd
-      ripgrep
-      rm-improved
-      tre-command
-      dua
-      procs
-      xcp
-      bottom
-      lsd
-    ];
+  home.packages = with pkgs; [
+    bandwhich
+    git
+    bat
+    fzf
+    fd
+    ripgrep
+    rm-improved
+    tre-command
+    dua
+    procs
+    xcp
+    bottom
+    lsd
+  ];
 
-    home.file = {
-      "fzf-color.sh" = { source = ../../dotfiles/fzf-color.sh; };
-      ".gitconfig" = { source = ../../dotfiles/.gitconfig; };
-    };
-
+  home.file = {
+    "fzf-color.sh" = { source = ../../dotfiles/fzf-color.sh; };
+    ".gitconfig" = { source = ../../dotfiles/.gitconfig; };
   };
 
-  dotfiles.programs.zoxide = { enable = true; };
+  xdg.configFile = {
+    "bottom/bottom.toml" = { source = ../../dotfiles/bottom/bottom.toml; };
+    "lsd/config.yaml" = { source = ../../dotfiles/lsd/config.yaml; };
+    "procs/config.toml" = { source = ../../dotfiles/procs/config.toml; };
+    "bat/config" = { source = ../../dotfiles/bat/config; };
+  };
+
+  programs.zoxide = {
+    enable = true;
+    enableBashIntegration = true;
+    enableFishIntegration = true;
+    enableZshIntegration = true;
+  };
+
+  dotfiles-manager.shellAliases = shellAliases;
 }
