@@ -17,6 +17,7 @@
 
       hmModules = {
         dotfiles-manager = inputs.dotfiles-manager.options;
+        lang = modules.misc.lang;
         tmux = modules.multiplexer.tmux;
         wezterm = modules.terminal.wezterm;
         browser = modules.gui.brave;
@@ -34,8 +35,8 @@
         neovim = modules.bin.neovim;
         keys = modules.misc.keys;
         ssh = modules.bin.ssh;
-        xdg = modules.misc.xdg;
-        npm = modules.misc.npm;
+        gpg = modules.bin.gpg;
+        npm = modules.bin.npm;
       };
 
       namedModules = {

@@ -30,6 +30,7 @@
     font = import ./misc/font.nix;
     keys = import ./misc/keys.nix;
     xdg = import ./misc/xdg.nix;
+    lang = import ./misc/lang.nix;
   };
   gui = {
     vscode = import ./gui/vscode.nix;
