@@ -23,8 +23,6 @@
   outputs = inputs: rec {
     modules = import ./modules/default.nix;
 
-    collections = (import ./collections.nix) modules;
-
-    profiles = (import ./profiles.nix) { inherit modules collections inputs; };
+    profiles = (import ./profiles.nix) { inherit modules inputs; };
   };
 }

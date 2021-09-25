@@ -1,4 +1,4 @@
-{ inputs, modules, collections }: {
+{ inputs, modules }: {
   user = {
     hugosum = {
       name = "hugosum";
