@@ -25,7 +25,6 @@
         cursor = modules.misc.bibata-cursor;
         font = modules.misc.font;
         essential = modules.bin.essential;
-        nix-direnv = modules.bin.nix-direnv;
         shell = modules.shell.zsh;
         telegram = modules.gui.telegram;
         screenshot = modules.bin.maim;
@@ -38,10 +37,12 @@
         gpg = modules.bin.gpg;
         npm = modules.bin.npm;
         cargo = modules.bin.cargo;
+        dircolors = modules.misc.dircolors;
       };
 
       namedModules = {
         eww = modules.bar.eww;
+        nix-direnv = modules.bin.nix-direnv;
         xserver = modules.nixos.xserver;
         window-manager = modules.windowManager.leftwm;
       };

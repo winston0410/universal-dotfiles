@@ -32,6 +32,7 @@
     keys = import ./misc/keys.nix;
     xdg = import ./misc/xdg.nix;
     lang = import ./misc/lang.nix;
+    dircolors = import ./misc/dircolors.nix;
   };
   gui = {
     vscode = import ./gui/vscode.nix;
