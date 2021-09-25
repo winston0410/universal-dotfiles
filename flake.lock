@@ -10,7 +10,7 @@
         ]
       },
       "locked": {
-        "narHash": "sha256-dmixFH9bhil3dOBt4uL65z77/TYSDMGh5d7vfYDIkrQ=",
+        "narHash": "sha256-YgmLYxG4LTaVBTGO0EGFDiijHGnT91k9Jcb9kcG+zj4=",
         "path": "/home/hugosum/dotfiles-manager",
         "type": "path"
       },
@@ -97,6 +97,21 @@
         "type": "github"
       }
     },
+    "flake-utils_2": {
+      "locked": {
+        "lastModified": 1631561581,
+        "narHash": "sha256-3VQMV5zvxaVLvqqUrNz3iJelLw30mIVSfZmAaauM3dA=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "7e5bf3925f6fbdfaf50a2a7ca0be2879c4261d19",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -168,6 +183,7 @@
       "inputs": {
         "dotfiles-manager": "dotfiles-manager",
         "eww": "eww",
+        "flake-utils": "flake-utils_2",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs_2"
       }

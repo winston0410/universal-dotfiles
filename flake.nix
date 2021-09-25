@@ -18,11 +18,29 @@
       url = "github:elkowar/eww/master";
       inputs = { nixpkgs.follows = "nixpkgs"; };
     };
+
+    flake-utils = {
+      url = "github:numtide/flake-utils";
+      inputs = { nixpkgs.follows = "nixpkgs"; };
+    };
   };
 
-  outputs = inputs: rec {
-    modules = import ./modules/default.nix;
+  outputs = inputs:
+    (inputs.nixpkgs.lib.attrsets.recursiveUpdate
+      (let modules = import ./modules/default.nix;
+      in {
+        inherit modules;
 
-    profiles = (import ./profiles.nix) { inherit modules inputs; };
-  };
+        profiles = (import ./profiles.nix) { inherit modules inputs; };
+
+      }) (inputs.flake-utils.lib.eachDefaultSystem (system: {
+        devShell = (({ pkgs, ... }:
+          pkgs.mkShell {
+            buildInputs = [ ];
+
+            shellHook = ''
+              nix flake update
+                '';
+          }) { pkgs = inputs.nixpkgs.legacyPackages.${system}; });
+      })));
 }
