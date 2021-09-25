@@ -37,6 +37,7 @@
         ssh = modules.bin.ssh;
         gpg = modules.bin.gpg;
         npm = modules.bin.npm;
+        cargo = modules.bin.cargo;
       };
 
       namedModules = {

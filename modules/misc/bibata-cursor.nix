@@ -2,37 +2,26 @@
 
 let
   cursorTheme = "Bibata_Ice";
-  cursorSize = "64";
+  cursorSize = 64;
   cursorPackage = pkgs.bibata-cursors;
-  gtkCursorTheme = ''gtk-cursor-theme-name="${cursorTheme}"'';
-  gtkCursorSize = "gtk-cursor-theme-size=${cursorSize}";
-  gtkCommand = ''
-    ${gtkCursorTheme}
-    ${gtkCursorSize}
-  '';
+  defaultCursor = "left_ptr";
 in {
-  home.packages = [ cursorPackage ];
+  xsession.pointerCursor = {
+    name = cursorTheme;
+    size = cursorSize;
+    package = cursorPackage;
+    defaultCursor = defaultCursor;
+  };
 
-  home.file = {
-    ".icons/default" = {
-      source = "${cursorPackage}/share/icons/${cursorTheme}";
+  xdg.configFile = {
+    "leftwm/themes/nix-generated" = {
+      text = ''
+        if [ -x "$(command -v xsetroot)" ]; then
+          ${pkgs.xorg.xsetroot}/bin/xsetroot -xcf ${cursorPackage}/share/icons/${cursorTheme}/cursors/${defaultCursor} ${
+            builtins.toString cursorSize
+          }
+        fi
+      '';
     };
-
-    ".gtkrc-2.0" = { text = gtkCommand; };
   };
-
-  xdg.configFile = { "gtk-3.0/setting.ini" = { text = gtkCommand; }; };
-
-  xresources.properties = {
-    "Xcursor.size" = cursorSize;
-    "Xcursor.theme" = cursorTheme;
-  };
-
-  # dotfiles.terminal.shell.variables = {
-    # XCURSOR_SIZE = "${sizeStr}";
-    # XCURSOR_THEME = "${cfg.cursor.theme}";
-  # };
-
-  # xsession.initExtra =
-  # "${config.lib.custom.getExecPath pkgs.xorg.xrdb} -merge $HOME/.Xresources";
 }

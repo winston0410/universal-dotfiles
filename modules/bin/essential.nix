@@ -37,6 +37,13 @@ in {
     ".gitconfig" = { source = ../../dotfiles/.gitconfig; };
   };
 
+  xdg.configFile = {
+    "bottom/bottom.toml" = { source = ../../dotfiles/bottom/bottom.toml; };
+    "lsd/config.yaml" = { source = ../../dotfiles/lsd/config.yaml; };
+    "procs/config.toml" = { source = ../../dotfiles/procs/config.toml; };
+    "bat/config" = { source = ../../dotfiles/bat/config; };
+  };
+
   programs.zoxide = {
     enable = true;
     enableBashIntegration = true;

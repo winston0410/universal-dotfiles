@@ -24,6 +24,7 @@
     ssh = import ./bin/ssh.nix;
     gpg = import ./bin/gpg.nix;
     npm = import ./bin/npm.nix;
+    cargo = import ./bin/cargo.nix;
   };
   misc = {
     bibata-cursor = import ./misc/bibata-cursor.nix;
