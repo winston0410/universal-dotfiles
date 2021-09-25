@@ -12,6 +12,7 @@ let
     top = "btm";
     ps = "procs";
     cp = "xcp -r ";
+    cat = "bat";
   };
 in {
 
