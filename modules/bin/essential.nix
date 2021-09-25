@@ -42,6 +42,11 @@ in {
     "lsd/config.yaml" = { source = ../../dotfiles/lsd/config.yaml; };
     "procs/config.toml" = { source = ../../dotfiles/procs/config.toml; };
     "bat/config" = { source = ../../dotfiles/bat/config; };
+    "ripgrep/config" = { source = ../../dotfiles/ripgrep/config; };
+  };
+
+  home.sessionVariables = {
+    RIPGREP_CONFIG_PATH = "$HOME/.config/ripgrep/config";
   };
 
   programs.zoxide = {
