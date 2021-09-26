@@ -1,10 +1,11 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 let
   cursorTheme = "Bibata_Ice";
   cursorSize = 64;
   cursorPackage = pkgs.bibata-cursors;
   defaultCursor = "left_ptr";
+  xdg = config.xdg;
 in {
   xsession.pointerCursor = {
     name = cursorTheme;
@@ -12,6 +13,8 @@ in {
     package = cursorPackage;
     defaultCursor = defaultCursor;
   };
+
+  xresources = { path = "${xdg.configHome}/X11/.Xresources"; };
 
   xdg.configFile = {
     "leftwm/themes/nix-generated" = {
