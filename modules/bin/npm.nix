@@ -21,4 +21,6 @@ in {
       '';
     };
   };
+
+  home.sessionVariables = { NODE_REPL_HISTORY = "${xdg.cacheHome}/node_repl_history"; };
 }
