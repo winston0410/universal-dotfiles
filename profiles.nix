@@ -42,6 +42,7 @@
         go = modules.bin.go;
         mix = modules.bin.mix;
         deno = modules.bin.deno;
+        gradle = modules.bin.gradle;
         dircolors = modules.misc.dircolors;
       };
 
