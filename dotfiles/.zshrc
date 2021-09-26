@@ -59,4 +59,4 @@ zinit wait lucid light-mode for \
 
 	#  Disable fzf keybindings here as it is now set in nix
 	#  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-	source ./fzf-color.sh
+	source "$HOME/.config/fzf/fzf-color.sh"

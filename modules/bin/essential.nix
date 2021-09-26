@@ -34,9 +34,8 @@ in {
     lsd
   ];
 
-  home.file = { "fzf-color.sh" = { source = ../../dotfiles/fzf-color.sh; }; };
-
   xdg.configFile = {
+    "fzf/fzf-color.sh" = { source = ../../dotfiles/fzf/fzf-color.sh; };
     "bottom/bottom.toml" = { source = ../../dotfiles/bottom/bottom.toml; };
     "lsd/config.yaml" = { source = ../../dotfiles/lsd/config.yaml; };
     "procs/config.toml" = { source = ../../dotfiles/procs/config.toml; };
