@@ -1,10 +1,12 @@
-{ pkgs, config, ... }: let 
+{ pkgs, config, ... }:
+let
   xdg = config.xdg;
   historySize = 1000000;
   historyShare = false;
   # The value of $HISTFILE
   historyPath = "${xdg.dataHome}/histfile";
-in{
+  historyIgnorePatterns = [ "shutdown" "exit" ];
+in {
   programs.zsh = {
     enable = true;
     initExtra = (builtins.readFile ../../dotfiles/.zshrc);
@@ -13,6 +15,7 @@ in{
       save = historySize;
       size = historySize;
       share = historyShare;
+      ignorePatterns = historyIgnorePatterns;
     };
   };
 
@@ -22,5 +25,6 @@ in{
     historyFile = historyPath;
     historyFileSize = historySize;
     historySize = historySize;
+    historyIgnore = historyIgnorePatterns;
   };
 }
