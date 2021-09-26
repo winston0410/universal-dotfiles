@@ -44,6 +44,7 @@
         deno = modules.bin.deno;
         gradle = modules.bin.gradle;
         stack = modules.bin.stack;
+        elm = modules.bin.elm;
         dircolors = modules.misc.dircolors;
       };
 

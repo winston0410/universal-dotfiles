@@ -31,6 +31,7 @@
     deno = import ./bin/deno.nix;
     gradle = import ./bin/gradle.nix;
     stack = import ./bin/stack.nix;
+    elm = import ./bin/elm.nix;
   };
   misc = {
     bibata-cursor = import ./misc/bibata-cursor.nix;
