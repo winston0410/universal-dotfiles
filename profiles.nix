@@ -38,6 +38,7 @@
         gpg = modules.bin.gpg;
         npm = modules.bin.npm;
         pip = modules.bin.pip;
+        racket = modules.bin.racket;
         cargo = modules.bin.cargo;
         go = modules.bin.go;
         mix = modules.bin.mix;

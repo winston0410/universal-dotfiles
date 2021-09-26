@@ -33,6 +33,7 @@
     stack = import ./bin/stack.nix;
     elm = import ./bin/elm.nix;
     gem = import ./bin/gem.nix;
+    racket = import ./bin/racket.nix;
   };
   misc = {
     bibata-cursor = import ./misc/bibata-cursor.nix;
