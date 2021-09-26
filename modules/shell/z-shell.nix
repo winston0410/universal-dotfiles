@@ -9,6 +9,8 @@ let
 in {
   programs.zsh = {
     enable = true;
+    # dotDir is started from $HOME instead of absolute path. Hardcoding here
+    dotDir = ".config/zsh";
     initExtra = (builtins.readFile ../../dotfiles/.zshrc);
     history = {
       path = historyPath;
