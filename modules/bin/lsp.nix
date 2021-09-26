@@ -1,6 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
-{
+let xdg = config.xdg;
+in {
   home.packages = with pkgs; [
     # For unknown reason it cant be built
     # cmake-language-server
@@ -52,4 +53,12 @@
     # nodePackages."@angular/language-server"
     # nodePackages."@prisma/language-server"
   ];
+
+  xdg.configFile = {
+    "solargraph/config.yml" = {
+      source = ../../dotfiles/solargraph/config.yml;
+    };
+  };
+
+  home.sessionVariables = { SOLARGRAPH_CACHE = "${xdg.cacheHome}"; };
 }
