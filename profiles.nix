@@ -37,6 +37,7 @@
         ssh = modules.bin.ssh;
         gpg = modules.bin.gpg;
         npm = modules.bin.npm;
+        pip = modules.bin.pip;
         cargo = modules.bin.cargo;
         dircolors = modules.misc.dircolors;
       };

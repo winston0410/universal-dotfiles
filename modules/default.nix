@@ -25,6 +25,7 @@
     gpg = import ./bin/gpg.nix;
     npm = import ./bin/npm.nix;
     cargo = import ./bin/cargo.nix;
+    pip = import ./bin/pip.nix;
   };
   misc = {
     bibata-cursor = import ./misc/bibata-cursor.nix;
