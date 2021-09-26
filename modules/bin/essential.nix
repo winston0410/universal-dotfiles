@@ -34,9 +34,7 @@ in {
     lsd
   ];
 
-  home.file = {
-    "fzf-color.sh" = { source = ../../dotfiles/fzf-color.sh; };
-  };
+  home.file = { "fzf-color.sh" = { source = ../../dotfiles/fzf-color.sh; }; };
 
   xdg.configFile = {
     "bottom/bottom.toml" = { source = ../../dotfiles/bottom/bottom.toml; };
@@ -49,6 +47,7 @@ in {
 
   home.sessionVariables = {
     RIPGREP_CONFIG_PATH = "$HOME/.config/ripgrep/config";
+    LESSHISTFILE = "${xdg.dataHome}/lesshst";
   };
 
   programs.zoxide = {
