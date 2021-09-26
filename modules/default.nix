@@ -28,6 +28,7 @@
     pip = import ./bin/pip.nix;
     go = import ./bin/go.nix;
     mix = import ./bin/mix.nix;
+    deno = import ./bin/deno.nix;
   };
   misc = {
     bibata-cursor = import ./misc/bibata-cursor.nix;

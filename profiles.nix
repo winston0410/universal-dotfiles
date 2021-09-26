@@ -41,6 +41,7 @@
         cargo = modules.bin.cargo;
         go = modules.bin.go;
         mix = modules.bin.mix;
+        deno = modules.bin.deno;
         dircolors = modules.misc.dircolors;
       };
 
