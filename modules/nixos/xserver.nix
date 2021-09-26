@@ -14,8 +14,14 @@ let
   '';
 
   initialLight = "sudo light -S 5";
+
+  xdg = config.home-manager.users.${username}.xdg;
 in {
-  environment.systemPackages = with pkgs; [ xdotool xorg.xmodmap xclip feh ];
+  environment.systemPackages = with pkgs; [ xdotool xorg.xmodmap xclip ];
+
+  environment.sessionVariables = {
+    ERRFILE = "${xdg.cacheHome}/X11/xsession-errors";
+  };
 
   services.xserver = {
     enable = true;
