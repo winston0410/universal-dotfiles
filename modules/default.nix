@@ -30,6 +30,7 @@
     mix = import ./bin/mix.nix;
     deno = import ./bin/deno.nix;
     gradle = import ./bin/gradle.nix;
+    stack = import ./bin/stack.nix;
   };
   misc = {
     bibata-cursor = import ./misc/bibata-cursor.nix;

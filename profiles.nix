@@ -43,6 +43,7 @@
         mix = modules.bin.mix;
         deno = modules.bin.deno;
         gradle = modules.bin.gradle;
+        stack = modules.bin.stack;
         dircolors = modules.misc.dircolors;
       };
 
