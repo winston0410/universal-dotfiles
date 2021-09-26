@@ -36,8 +36,6 @@ in {
 
   home.file = {
     "fzf-color.sh" = { source = ../../dotfiles/fzf-color.sh; };
-    ".gitconfig" = { source = ../../dotfiles/.gitconfig; };
-    ".gitignore" = { source = ../../dotfiles/.gitignore; };
   };
 
   xdg.configFile = {
@@ -46,6 +44,7 @@ in {
     "procs/config.toml" = { source = ../../dotfiles/procs/config.toml; };
     "bat/config" = { source = ../../dotfiles/bat/config; };
     "ripgrep/config" = { source = ../../dotfiles/ripgrep/config; };
+    "git/" = { source = ../../dotfiles/git; };
   };
 
   home.sessionVariables = {
