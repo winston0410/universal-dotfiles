@@ -46,7 +46,8 @@ in {
 
   home.sessionVariables = {
     RIPGREP_CONFIG_PATH = "$HOME/.config/ripgrep/config";
-    LESSHISTFILE = "${xdg.dataHome}/lesshst";
+    LESSKEY = "${xdg.cacheHome}/less/key";
+    LESSHISTFILE = "${xdg.cacheHome}/less/history";
   };
 
   programs.zoxide = {
