@@ -3,6 +3,7 @@
 	email = hugosum.dev@protonmail.com
 [core]
 	editor = nvim
+    excludesfile = ~/.gitignore
 [difftool "vimdiff"]
 	path = nvim -d
 [diff]

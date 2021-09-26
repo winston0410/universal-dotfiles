@@ -35,6 +35,7 @@ in {
   home.file = {
     "fzf-color.sh" = { source = ../../dotfiles/fzf-color.sh; };
     ".gitconfig" = { source = ../../dotfiles/.gitconfig; };
+    ".gitignore" = { source = ../../dotfiles/.gitignore; };
   };
 
   xdg.configFile = {
