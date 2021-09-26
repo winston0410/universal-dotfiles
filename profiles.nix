@@ -17,6 +17,7 @@
 
       hmModules = {
         dotfiles-manager = inputs.dotfiles-manager.options;
+        version = modules.misc.version;
         lang = modules.misc.lang;
         tmux = modules.multiplexer.tmux;
         wezterm = modules.terminal.wezterm;

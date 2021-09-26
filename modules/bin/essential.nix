@@ -50,8 +50,6 @@ in {
 
   home.sessionVariables = {
     RIPGREP_CONFIG_PATH = "$HOME/.config/ripgrep/config";
-    # share cmd history between bash and zsh and other shells
-    HISTFILE = "${xdg.dataHome}/histfile";
   };
 
   programs.zoxide = {
