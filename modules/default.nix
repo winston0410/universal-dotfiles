@@ -26,6 +26,8 @@
     npm = import ./bin/npm.nix;
     cargo = import ./bin/cargo.nix;
     pip = import ./bin/pip.nix;
+    go = import ./bin/go.nix;
+    mix = import ./bin/mix.nix;
   };
   misc = {
     bibata-cursor = import ./misc/bibata-cursor.nix;
