@@ -45,6 +45,7 @@
         gradle = modules.bin.gradle;
         stack = modules.bin.stack;
         elm = modules.bin.elm;
+        gem = modules.bin.gem;
         dircolors = modules.misc.dircolors;
       };
 

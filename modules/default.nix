@@ -32,6 +32,7 @@
     gradle = import ./bin/gradle.nix;
     stack = import ./bin/stack.nix;
     elm = import ./bin/elm.nix;
+    gem = import ./bin/gem.nix;
   };
   misc = {
     bibata-cursor = import ./misc/bibata-cursor.nix;
