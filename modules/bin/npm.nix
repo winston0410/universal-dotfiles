@@ -7,6 +7,8 @@ in {
       text = (builtins.readFile ../../dotfiles/.npmrc) + ''
         # Cache directory for NPM
         cache=${xdg.cacheHome}/npm
+        # Cache directory for PNPM
+        store-dir=${xdg.cacheHome}/pnpm
         update-notifier=false
       '';
     };
