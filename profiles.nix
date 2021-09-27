@@ -48,6 +48,7 @@
         elm = modules.bin.elm;
         gem = modules.bin.gem;
         redis = modules.bin.redis;
+        aws = modules.bin.aws;
         xdg = modules.misc.xdg;
         dircolors = modules.misc.dircolors;
       };

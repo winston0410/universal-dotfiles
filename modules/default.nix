@@ -34,6 +34,7 @@
     elm = import ./bin/elm.nix;
     gem = import ./bin/gem.nix;
     racket = import ./bin/racket.nix;
+    aws = import ./bin/aws.nix;
   };
   misc = {
     bibata-cursor = import ./misc/bibata-cursor.nix;
