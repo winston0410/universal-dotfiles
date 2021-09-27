@@ -19,8 +19,19 @@ let
 in {
   environment.systemPackages = with pkgs; [ xdotool xorg.xmodmap xclip ];
 
-  environment.sessionVariables = {
-    ERRFILE = "${xdg.cacheHome}/X11/xsession-errors";
+  home-manager.users.${username} = {
+    home.activation = {
+      x11-cache-prep =
+        inputs.home-manager.lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+          $DRY_RUN_CMD mkdir $VERBOSE_ARG -p '${xdg.cacheHome}/X11'
+        '';
+    };
+    
+    home.sessionVariables = {
+      XCOMPOSEFILE = "${xdg.cacheHome}/X11/xcompose";
+      XCOMPOSECACHE = "${xdg.cacheHome}/X11/xcompose";
+      ERRFILE = "${xdg.cacheHome}/X11/xsession-errors";
+    };
   };
 
   services.xserver = {
