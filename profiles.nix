@@ -52,6 +52,7 @@
       };
 
       namedModules = {
+        pg = modules.service.nixos.postgres;
         eww = modules.bar.eww;
         nix-direnv = modules.bin.nix-direnv;
         xserver = modules.nixos.xserver;
