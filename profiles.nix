@@ -47,6 +47,7 @@
         stack = modules.bin.stack;
         elm = modules.bin.elm;
         gem = modules.bin.gem;
+        redis = modules.bin.redis;
         xdg = modules.misc.xdg;
         dircolors = modules.misc.dircolors;
       };
