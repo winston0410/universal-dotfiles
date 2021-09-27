@@ -5,6 +5,12 @@ let xdg = config.home-manager.users.${username}.xdg;
 in {
   services.postgresql = { enable = true; };
 
+  home.activation = {
+    pg-cache-prep = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+      $DRY_RUN_CMD mkdir $VERBOSE_ARG -p '${xdg.cacheHome}/pg'
+    '';
+  };
+
   home-manager.users.${username} = {
     home.sessionVariables = {
       PSQLRC = "${xdg.configHome}/pg/psqlrc";
