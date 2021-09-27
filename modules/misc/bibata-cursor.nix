@@ -14,7 +14,7 @@ in {
     defaultCursor = defaultCursor;
   };
 
-  xresources = { path = "${xdg.configHome}/X11/.Xresources"; };
+  # xresources = { path = "${xdg.configHome}/X11/.Xresources"; };
 
   xdg.configFile = {
     "leftwm/themes/nix-generated" = {

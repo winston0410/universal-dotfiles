@@ -50,8 +50,8 @@ in {
         enable = true;
         greeter = { enable = false; };
         autoLogin.timeout = 0;
-        # user-authority-in-system-dir=true
         extraConfig = ''
+          user-authority-in-system-dir=true
         '';
       };
       autoLogin = {
