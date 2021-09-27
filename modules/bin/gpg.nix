@@ -7,6 +7,5 @@ in {
     enable = true;
     # convert file into set from string?
     settings = { };
-    homedir = "${xdg.dataHome}/gnupg";
   };
 }

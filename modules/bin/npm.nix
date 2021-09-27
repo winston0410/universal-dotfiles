@@ -23,11 +23,6 @@ in {
     };
   };
 
-  home.sessionVariables = {
-    NPM_CONFIG_USERCONFIG = "${xdg.configHome}/npm/npmrc";
-    NODE_REPL_HISTORY = "${xdg.cacheHome}/node_repl_history";
-  };
-
   dotfiles-manager.shellAliases = {
     yarn = ''yarn --use-yarnrc "${xdg.configHome}/yarn/yarnrc"'';
   };

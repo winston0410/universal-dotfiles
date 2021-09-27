@@ -17,6 +17,7 @@
 
       hmModules = {
         dotfiles-manager = inputs.dotfiles-manager.options;
+        xdg = inputs.xdg.lib.hm;
         version = modules.misc.version;
         lang = modules.misc.lang;
         tmux = modules.multiplexer.tmux;
@@ -38,18 +39,7 @@
         gpg = modules.bin.gpg;
         npm = modules.bin.npm;
         pip = modules.bin.pip;
-        racket = modules.bin.racket;
         cargo = modules.bin.cargo;
-        go = modules.bin.go;
-        mix = modules.bin.mix;
-        deno = modules.bin.deno;
-        gradle = modules.bin.gradle;
-        stack = modules.bin.stack;
-        elm = modules.bin.elm;
-        gem = modules.bin.gem;
-        redis = modules.bin.redis;
-        aws = modules.bin.aws;
-        xdg = modules.misc.xdg;
         dircolors = modules.misc.dircolors;
       };
 

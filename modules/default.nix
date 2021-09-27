@@ -26,15 +26,6 @@
     npm = import ./bin/npm.nix;
     cargo = import ./bin/cargo.nix;
     pip = import ./bin/pip.nix;
-    go = import ./bin/go.nix;
-    mix = import ./bin/mix.nix;
-    deno = import ./bin/deno.nix;
-    gradle = import ./bin/gradle.nix;
-    stack = import ./bin/stack.nix;
-    elm = import ./bin/elm.nix;
-    gem = import ./bin/gem.nix;
-    racket = import ./bin/racket.nix;
-    aws = import ./bin/aws.nix;
   };
   misc = {
     bibata-cursor = import ./misc/bibata-cursor.nix;

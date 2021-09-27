@@ -23,6 +23,13 @@
       url = "github:numtide/flake-utils";
       inputs = { nixpkgs.follows = "nixpkgs"; };
     };
+
+    xdg = {
+      url = "path:/home/hugosum/xdg.nix";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
   };
 
   outputs = inputs:

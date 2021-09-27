@@ -44,18 +44,6 @@ in {
     "git/" = { source = ../../dotfiles/git; };
   };
 
-  home.activation = {
-    less-cache-home = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-      $DRY_RUN_CMD mkdir $VERBOSE_ARG -p '${xdg.cacheHome}/less'
-    '';
-  };
-
-  home.sessionVariables = {
-    RIPGREP_CONFIG_PATH = "$HOME/.config/ripgrep/config";
-    LESSKEY = "${xdg.cacheHome}/less/key";
-    LESSHISTFILE = "${xdg.cacheHome}/less/history";
-  };
-
   programs.zoxide = {
     enable = true;
     enableBashIntegration = true;

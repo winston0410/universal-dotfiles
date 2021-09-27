@@ -59,6 +59,4 @@ in {
       source = ../../dotfiles/solargraph/config.yml;
     };
   };
-
-  home.sessionVariables = { SOLARGRAPH_CACHE = "${xdg.cacheHome}"; };
 }

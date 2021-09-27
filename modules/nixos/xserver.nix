@@ -1,5 +1,5 @@
 username:
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 let
   keybindings = pkgs.writeText "xkb-layout" ''
@@ -18,21 +18,6 @@ let
   xdg = config.home-manager.users.${username}.xdg;
 in {
   environment.systemPackages = with pkgs; [ xdotool xorg.xmodmap xclip ];
-
-  home-manager.users.${username} = {
-    home.activation = {
-      x11-cache-prep =
-        inputs.home-manager.lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-          $DRY_RUN_CMD mkdir $VERBOSE_ARG -p '${xdg.cacheHome}/X11'
-        '';
-    };
-    
-    home.sessionVariables = {
-      XCOMPOSEFILE = "${xdg.cacheHome}/X11/xcompose";
-      XCOMPOSECACHE = "${xdg.cacheHome}/X11/xcompose";
-      ERRFILE = "${xdg.cacheHome}/X11/xsession-errors";
-    };
-  };
 
   services.xserver = {
     enable = true;
