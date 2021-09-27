@@ -61,6 +61,7 @@
       docker = import ./service/docker.nix;
       k8s = import ./service/k8s.nix;
       postgres = import ./service/postgres.nix;
+      mysql = import ./service/mysql.nix;
       hydra = import ./service/hydra.nix;
     };
   };
