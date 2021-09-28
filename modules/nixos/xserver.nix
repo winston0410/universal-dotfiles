@@ -46,8 +46,9 @@ in {
         enable = true;
         greeter = { enable = false; };
         autoLogin.timeout = 0;
+        # Seems to have trouble with xclip
+        # user-authority-in-system-dir=true
         extraConfig = ''
-          user-authority-in-system-dir=true
         '';
       };
       autoLogin = {
