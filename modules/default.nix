@@ -11,6 +11,7 @@
     nushell = import ./shell/nushell.nix;
   };
   bin = {
+    himalaya = import ./bin/himalaya.nix;
     neovim = import ./bin/neovim.nix;
     lsp = import ./bin/lsp.nix;
     formatter = import ./bin/formatter.nix;

@@ -34,6 +34,7 @@
         formatter = modules.bin.formatter;
         linter = modules.bin.linter;
         neovim = modules.bin.neovim;
+        himalaya = modules.bin.himalaya;
         keys = modules.misc.keys;
         ssh = modules.bin.ssh;
         gpg = modules.bin.gpg;
