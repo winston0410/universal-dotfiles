@@ -46,8 +46,10 @@
             buildInputs = [ ];
 
             shellHook = ''
-              nix flake update
-                '';
+              nix flake lock --update-input home-manager;
+              nix flake lock --update-input dotfiles-manager;
+              nix flake lock --update-input xdg;
+            '';
           }) { pkgs = inputs.nixpkgs.legacyPackages.${system}; });
       })));
 }
