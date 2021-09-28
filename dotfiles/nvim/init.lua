@@ -97,6 +97,7 @@ local global_options = {
 	{ "grepformat", "%f:%l:%c:%m" },
 	{ "wildmenu", true },
 	{ "wildmode", "longest:full,full" },
+	{ "hidden", true },
 }
 
 for _, option in ipairs(global_options) do
