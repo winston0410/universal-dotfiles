@@ -20,43 +20,8 @@ nonnumeric_search = false
 align = "Left"
 
 [[columns]]
-kind = "Tty"
-style = "BrightWhite|Black"
-numeric_search = false
-nonnumeric_search = false
-align = "Left"
-
-[[columns]]
-kind = "UsageCpu"
-style = "ByPercentage"
-numeric_search = false
-nonnumeric_search = false
-align = "Right"
-
-[[columns]]
-kind = "UsageMem"
-style = "ByPercentage"
-numeric_search = false
-nonnumeric_search = false
-align = "Right"
-
-[[columns]]
-kind = "CpuTime"
-style = "BrightCyan|Cyan"
-numeric_search = false
-nonnumeric_search = false
-align = "Left"
-
-[[columns]]
-kind = "Separator"
-style = "White|BrightBlack"
-numeric_search = false
-nonnumeric_search = false
-align = "Left"
-
-[[columns]]
 kind = "Command"
-style = "BrightWhite|Black"
+style = "BrightMagenta|Magenta"
 numeric_search = false
 nonnumeric_search = true
 align = "Left"
@@ -122,4 +87,3 @@ path = "unix:///var/run/docker.sock"
 [pager]
 mode = "Auto"
 detect_width = false
-
