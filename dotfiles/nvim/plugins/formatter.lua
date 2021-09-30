@@ -1,5 +1,5 @@
 local function init(paq)
-    -- Cannot use variable outside config function in config
+	-- Cannot use variable outside config function in config
 	-- local format_key = "<C-F>"
 	paq({
 		-- "winston0410/formatter.nvim",
@@ -8,7 +8,7 @@ local function init(paq)
 		keys = { { "n", "<a-f>" } },
 		config = function()
 			local function mintfmt()
-                -- https://github.com/google/google-java-format
+				-- https://github.com/google/google-java-format
 				return {
 					exe = "",
 					args = { "--", vim.api.nvim_buf_get_name(0) },
@@ -16,14 +16,14 @@ local function init(paq)
 				}
 			end
 			local function javafmt()
-                -- https://github.com/google/google-java-format
+				-- https://github.com/google/google-java-format
 				return {
 					exe = "",
 					args = { "--", vim.api.nvim_buf_get_name(0) },
 					stdin = false,
 				}
 			end
-            local function inifmt()
+			local function inifmt()
 				return {
 					exe = "",
 					args = { "--", vim.api.nvim_buf_get_name(0) },
@@ -132,7 +132,12 @@ local function init(paq)
 			local function prettier()
 				return {
 					exe = "prettier",
-					args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0) },
+					args = {
+						"--plugin-search-dir=.",
+						"--stdin-filepath",
+						"--plugin=prettier-plugin-svelte",
+						vim.api.nvim_buf_get_name(0),
+					},
 					stdin = true,
 				}
 			end
