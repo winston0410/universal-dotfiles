@@ -129,17 +129,18 @@ local function init(paq)
 				}
 			end
 
-			local function prettier()
-				return {
-					exe = "prettier",
-					args = {
-						"--plugin-search-dir=.",
-						"--stdin-filepath",
-						"--plugin=prettier-plugin-svelte",
-						vim.api.nvim_buf_get_name(0),
-					},
-					stdin = true,
-				}
+			local function prettier(opts)
+				opts = opts or {}
+				return function()
+					return {
+						exe = "prettier",
+						args = vim.list_extend(opts, {
+							"--stdin-filepath",
+							vim.api.nvim_buf_get_name(0),
+						}),
+						stdin = true,
+					}
+				end
 			end
 
 			local function ktlint()
@@ -275,31 +276,36 @@ local function init(paq)
 			require("formatter").setup({
 				logging = false,
 				filetype = {
-					html = { prettier },
-					css = { prettier },
-					scss = { prettier },
-					sass = { prettier },
-					less = { prettier },
-					javascript = { prettier },
-					typescript = { prettier },
-					javascriptreact = { prettier },
-					typescriptreact = { prettier },
-					["javascript.jsx"] = { prettier },
-					["typescript.jsx"] = { prettier },
+					html = { prettier() },
+					css = { prettier() },
+					scss = { prettier() },
+					sass = { prettier() },
+					less = { prettier() },
+					javascript = { prettier() },
+					typescript = { prettier() },
+					javascriptreact = { prettier() },
+					typescriptreact = { prettier() },
+					["javascript.jsx"] = { prettier() },
+					["typescript.jsx"] = { prettier() },
 					sh = { shfmt },
 					zsh = { shfmt },
-					markdown = { prettier },
+					markdown = { prettier() },
 					-- Use fixjson?
-					json = { prettier },
-					yaml = { prettier },
-					toml = { prettier },
-					vue = { prettier },
-					svelte = { prettier },
+					json = { prettier() },
+					yaml = { prettier() },
+					toml = { prettier() },
+					vue = { prettier() },
+					svelte = {
+						prettier({
+							"--plugin-search-dir=.",
+							"--plugin=prettier-plugin-svelte",
+						}),
+					},
 					python = { black },
 					dockerfile = { dockfmt },
 					-- No formatter for make
 					make = {
-						-- prettier
+						-- prettier()
 					},
 					ruby = {},
 					lua = { stylua },
