@@ -36,13 +36,19 @@ local function init(paq)
 			end
 
 			local servers = {
+                "als",
+                "solang",
 				"solargraph",
+				"theme_check",
+                "taplo",
 				"mint",
 				"bicep",
 				"ansiblels",
 				"vala_ls",
 				"jdtls",
 				"groovyls",
+                --  for xml
+                "lemminx",
 				"html",
 				"cssls",
 				"jsonls",
@@ -74,6 +80,9 @@ local function init(paq)
 				"metals",
 				"julials",
 				"purescriptls",
+				"rescriptls",
+				"racket_langserver",
+                "pasls",
 				"yamlls",
 				"vimls",
 				"rnix",
