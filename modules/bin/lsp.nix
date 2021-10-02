@@ -11,6 +11,7 @@ in {
     ccls
     # cannot be built
     # haskell-language-server
+    elmPackages.elm-language-server
     beamPackages.elixir_ls
     # cannot be built
     # nodePackages.purescript-language-server
