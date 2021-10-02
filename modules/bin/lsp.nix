@@ -9,7 +9,8 @@ in {
     gopls
     rnix-lsp
     ccls
-    haskell-language-server
+    # cannot be built
+    # haskell-language-server
     beamPackages.elixir_ls
     # cannot be built
     # nodePackages.purescript-language-server
