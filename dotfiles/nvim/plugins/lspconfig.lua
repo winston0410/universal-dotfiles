@@ -69,8 +69,9 @@ local function init(paq)
 				"serve_d",
 				"gdscript",
 				"scry",
-				"ember",
-				"angularls",
+                --  Comment this out as they are not used at all
+				--  "ember",
+				--  "angularls",
 				"bashls",
 				"prismals",
 				"tsserver",
