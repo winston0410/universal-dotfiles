@@ -10,6 +10,8 @@
     # nodePackages.rustywind
     nodePackages.prettier
     # nodePackages.prettier_d_slim
+    rufo
+    elmPackages.elm-format
     haskellPackages.hindent
     (buildGoModule rec {
       pname = "dockfmt";

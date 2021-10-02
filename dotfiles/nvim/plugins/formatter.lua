@@ -8,7 +8,6 @@ local function init(paq)
 		keys = { { "n", "<a-f>" } },
 		config = function()
 			local function mintfmt()
-				-- https://github.com/google/google-java-format
 				return {
 					exe = "",
 					args = { "--", vim.api.nvim_buf_get_name(0) },
@@ -81,7 +80,6 @@ local function init(paq)
 				}
 			end
 			local function elm_format()
-				-- Not working
 				return {
 					exe = "elm-format",
 					args = { "--", vim.api.nvim_buf_get_name(0) },
@@ -199,14 +197,6 @@ local function init(paq)
 				}
 			end
 
-			local function luafmt()
-				return {
-					exe = "lua-format",
-					args = { "--", vim.api.nvim_buf_get_name(0) },
-					stdin = true,
-				}
-			end
-
 			local function nixfmt()
 				return {
 					exe = "nixfmt",
@@ -273,6 +263,15 @@ local function init(paq)
 					stdin = false,
 				}
 			end
+
+			local function rufo()
+				return {
+					exe = "rufo",
+					args = { "--", vim.api.nvim_buf_get_name(0) },
+					stdin = false,
+				}
+			end
+
 			require("formatter").setup({
 				logging = false,
 				filetype = {
@@ -307,7 +306,7 @@ local function init(paq)
 					make = {
 						-- prettier()
 					},
-					ruby = {},
+					ruby = { rufo },
 					lua = { stylua },
 					teal = { stylua },
 					rust = { rustfmt },
@@ -343,7 +342,6 @@ local function init(paq)
 					mint = { mintfmt },
 				},
 			})
-
 			vim.api.nvim_set_keymap("n", "<a-f>", "<cmd>write<bar>Format<cr>", { silent = true, noremap = true })
 		end,
 	})
