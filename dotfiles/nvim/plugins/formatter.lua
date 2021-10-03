@@ -50,14 +50,6 @@ local function init(paq)
 					stdin = false,
 				}
 			end
-			local function pugfmt()
-				-- pugfmt
-				return {
-					exe = "",
-					args = { "--", vim.api.nvim_buf_get_name(0) },
-					stdin = false,
-				}
-			end
 			local function mix_format()
 				return {
 					exe = "mix",
@@ -276,6 +268,8 @@ local function init(paq)
 				logging = false,
 				filetype = {
 					html = { prettier() },
+					xml = { prettier() },
+					svg = { prettier() },
 					css = { prettier() },
 					scss = { prettier() },
 					sass = { prettier() },
@@ -332,7 +326,12 @@ local function init(paq)
 					ini = { inifmt },
 					dosini = { inifmt },
 					dhall = { dhall_lint, dhall_format },
-					pug = { pugfmt },
+					pug = {
+						prettier({
+							"--plugin-search-dir=.",
+							"--plugin=@prettier/plugin-pug",
+						}),
+					},
 					nunjucks = { njkfmt },
 					liquid = { liquidfmt },
 					mustache = {},
