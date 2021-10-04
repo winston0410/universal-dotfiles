@@ -329,7 +329,12 @@ local function init(paq)
 					pug = {
 						prettier({
 							"--plugin-search-dir=.",
-							"--plugin=@prettier/plugin-pug",
+							"--plugin=plugin-pug",
+						}),
+                        --  Falling back with system plugin
+						prettier({
+							"--plugin-search-dir=$XDG_DATA_HOME/prettier",
+							"--plugin=plugin-pug",
 						}),
 					},
 					nunjucks = { njkfmt },
