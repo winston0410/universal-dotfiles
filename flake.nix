@@ -23,6 +23,11 @@
       url = "github:numtide/flake-utils";
       inputs = { nixpkgs.follows = "nixpkgs"; };
     };
+    
+    npmlock2nix = {
+      url = "path:/home/hugosum/npmlock2nix";
+      flake = false;
+    };
 
     xdg = {
       url = "path:/home/hugosum/xdg.nix";

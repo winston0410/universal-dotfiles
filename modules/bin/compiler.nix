@@ -1,12 +1,9 @@
-username:
 { pkgs, ... }:
 
 {
-  home-manager.users.${username} = {
-    home.packages = with pkgs;
-      [
-        # gcc
-        nodejs-16_x
-      ];
-  };
+  home.packages = with pkgs;
+    [
+      # gcc
+      nodejs-16_x
+    ];
 }

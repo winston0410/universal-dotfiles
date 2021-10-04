@@ -10,7 +10,7 @@
         ]
       },
       "locked": {
-        "narHash": "sha256-P0DAGeFRS8PAa4DC43G/o0tSN4kU+DFwVNXsRHLxf/A=",
+        "narHash": "sha256-mhtAyL1GCqfE0+P2U6j5rkUGLa/LrwhANnqWJZCohwI=",
         "path": "/home/hugosum/dotfiles-manager",
         "type": "path"
       },
@@ -119,11 +119,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1633247242,
-        "narHash": "sha256-D1iq2iBzpAP/b3nrEKXD54QecB1HwIAOOsNlGxcEcTM=",
+        "lastModified": 1633296444,
+        "narHash": "sha256-DnC7yVyoYFSsvFze16AWDa5iSHgtT1MbDGgp8rSC3H4=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "095f3e32ae8de2e0828e548d88e553069025cec1",
+        "rev": "099cbcf13e8219f07b493980a66fe64df0e32d09",
         "type": "github"
       },
       "original": {
@@ -179,6 +179,18 @@
         "type": "github"
       }
     },
+    "npmlock2nix": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-aPkkdKGEQScJvgU8Uziue+XuNKJ7VLDSnQLKOb3vE9E=",
+        "path": "/home/hugosum/npmlock2nix",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/hugosum/npmlock2nix",
+        "type": "path"
+      }
+    },
     "root": {
       "inputs": {
         "dotfiles-manager": "dotfiles-manager",
@@ -186,6 +198,7 @@
         "flake-utils": "flake-utils_2",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs_2",
+        "npmlock2nix": "npmlock2nix",
         "xdg": "xdg"
       }
     },

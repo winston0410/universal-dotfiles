@@ -1,6 +1,7 @@
-{ pkgs, dotroot, ... }:
+{ pkgs, config, inputs, ... }:
 
-{
+let xdg = config.xdg;
+in {
   home.packages = with pkgs; [
     stylua
     nixfmt
@@ -25,4 +26,11 @@
       vendorSha256 = null;
     })
   ];
+
+  # Prettier plugin
+  home.file = let
+    pug = pkgs.callPackage ../../derivations/prettier-plugin-pug.nix {
+      npmlock2nix = pkgs.callPackage inputs.npmlock2nix { };
+    };
+  in { "${xdg.dataHome}/prettier/@prettier/plugin-pug" = { source = pug; }; };
 }
