@@ -15,11 +15,14 @@
     dev = (inputs.dotfiles-manager.lib.mkProfile {
       modules = { };
 
+      specialArgs = { inherit inputs; };
+
       hmModules = {
         dotfiles-manager = inputs.dotfiles-manager.options;
         xdg = inputs.xdg.lib.hm;
         version = modules.misc.version;
         lang = modules.misc.lang;
+        compiler = modules.bin.compiler;
         tmux = modules.multiplexer.tmux;
         wezterm = modules.terminal.wezterm;
         browser = modules.gui.brave;
