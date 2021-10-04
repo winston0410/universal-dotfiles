@@ -12,10 +12,12 @@
   };
 
   home = {
-    dev = (inputs.dotfiles-manager.lib.mkProfile {
+    dev = let 
+      system = "x86_64-linux";
+    in (inputs.dotfiles-manager.lib.mkProfile {
       modules = { };
 
-      specialArgs = { inherit inputs; };
+      specialArgs = { inherit inputs system; };
 
       hmModules = {
         dotfiles-manager = inputs.dotfiles-manager.options;

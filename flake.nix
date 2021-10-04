@@ -23,17 +23,15 @@
       url = "github:numtide/flake-utils";
       inputs = { nixpkgs.follows = "nixpkgs"; };
     };
-    
-    npmlock2nix = {
-      url = "path:/home/hugosum/npmlock2nix";
-      flake = false;
+
+    mkNpmModule = {
+      url = "path:/home/hugosum/mkNpmModule";
+      inputs = { nixpkgs.follows = "nixpkgs"; };
     };
 
     xdg = {
       url = "path:/home/hugosum/xdg.nix";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-      };
+      inputs = { nixpkgs.follows = "nixpkgs"; };
     };
   };
 
@@ -54,6 +52,7 @@
               nix flake lock --update-input home-manager;
               nix flake lock --update-input dotfiles-manager;
               nix flake lock --update-input xdg;
+              nix flake lock --update-input mkNpmModule;
             '';
           }) { pkgs = inputs.nixpkgs.legacyPackages.${system}; });
       })));

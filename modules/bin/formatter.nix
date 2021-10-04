@@ -1,4 +1,4 @@
-{ pkgs, config, inputs, ... }:
+{ pkgs, config, inputs, system, ... }:
 
 let xdg = config.xdg;
 in {
@@ -29,13 +29,12 @@ in {
 
   # Prettier plugin
   home.file = let
-    mkNpmModule = pkgs.callPackage ../../derivations/helper/mkNpmModule.nix { inherit inputs; };
     prettierPluginDir = "${xdg.dataHome}/prettier/node_modules";
   in {
     "${prettierPluginDir}/@prettier/plugin-pug" = let 
         version = "743f5aafa11d161537bbcd614fe5af81944a8d2f";
     in{
-      source = mkNpmModule {
+      source = (inputs.mkNpmModule.lib.${system}.build {
         pname = "prettier-plugin-pug";
         inherit version;
         src = pkgs.fetchFromGitHub {
@@ -44,7 +43,7 @@ in {
           rev = version;
           sha256 = "sha256-SUH94XnD0a0JX3SQQmHB9SWnS7oVP9BiBcS9a7o4wm0=";
         };
-      };
+      });
     };
     # "${prettierPluginDir}/@prettier/plugin-xml" = let 
       # version = "";
