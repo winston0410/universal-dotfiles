@@ -134,11 +134,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1633364404,
-        "narHash": "sha256-XoCtlQreWVCpBGFwRylpkDkIfuEEgkZGUCxDAda1LBE=",
+        "lastModified": 1633531796,
+        "narHash": "sha256-fm1tcPf9yB+4ySxKETQk6hVpmbYZPVb27fEJFuIz6fA=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "81ec2aed8a2438553c6689061eeb45a40883ec24",
+        "rev": "d9fe208f3ccd7047a29eb31fd0cd3191c4445323",
         "type": "github"
       },
       "original": {
@@ -147,7 +147,7 @@
         "type": "github"
       }
     },
-    "mkNpmModule": {
+    "mkNodeModule": {
       "inputs": {
         "flake-utils": "flake-utils_3",
         "nixpkgs": [
@@ -156,12 +156,12 @@
         "npmlock2nix": "npmlock2nix"
       },
       "locked": {
-        "narHash": "sha256-d1hl0MWR1eonO/IYPcR5aKZUBpzxH3PSGZ8TcExW5GU=",
-        "path": "/home/hugosum/mkNpmModule",
+        "narHash": "sha256-JEno1GViwlVtXvzFFvgg5ga0H3c4ddHlv78HBxD6WzE=",
+        "path": "/home/hugosum/mkNodeModule",
         "type": "path"
       },
       "original": {
-        "path": "/home/hugosum/mkNpmModule",
+        "path": "/home/hugosum/mkNodeModule",
         "type": "path"
       }
     },
@@ -198,11 +198,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1633080050,
-        "narHash": "sha256-T9I2WnlUzAIL70dk9V1jqaYk3nypy/cMkWR19S47ZHc=",
+        "lastModified": 1633351077,
+        "narHash": "sha256-z38JG4Bb0GtM1aF1pANVdp1dniMP23Yb3HnRoJRy2uU=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "82155ff501c7622cb2336646bb62f7624261f6d7",
+        "rev": "14aef06d9b3ad1d07626bdbb16083b83f92dc6c1",
         "type": "github"
       },
       "original": {
@@ -235,7 +235,7 @@
         "eww": "eww",
         "flake-utils": "flake-utils_2",
         "home-manager": "home-manager",
-        "mkNpmModule": "mkNpmModule",
+        "mkNodeModule": "mkNodeModule",
         "nixpkgs": "nixpkgs_2",
         "xdg": "xdg"
       }

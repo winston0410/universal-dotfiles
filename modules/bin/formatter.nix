@@ -34,7 +34,7 @@ in {
     "${prettierPluginDir}/@prettier/plugin-pug" = let 
         version = "743f5aafa11d161537bbcd614fe5af81944a8d2f";
     in{
-      source = (inputs.mkNpmModule.lib.${system}.build {
+      source = (inputs.mkNodeModule.lib.${system}.build {
         pname = "prettier-plugin-pug";
         inherit version;
         src = pkgs.fetchFromGitHub {
@@ -45,6 +45,21 @@ in {
         };
       });
     };
+    
+    # "${prettierPluginDir}/@prettier/plugin-xml" = let 
+        # version = "0a23520212735d19316dcec81161589c9d5bf897";
+    # in{
+      # source = (inputs.mkNodeModule.lib.${system}.build {
+        # pname = "prettier-plugin-xml";
+        # inherit version;
+        # src = pkgs.fetchFromGitHub {
+          # owner = "prettier";
+          # repo = "plugin-xml";
+          # rev = version;
+          # sha256 = "sha256-WUmEX4Vo4wvLEz0yxp1MioyGfixCqFApZuGZ1WwRsVo";
+        # };
+      # });
+    # };
     # "${prettierPluginDir}/@prettier/plugin-xml" = let 
       # version = "";
     # in {
