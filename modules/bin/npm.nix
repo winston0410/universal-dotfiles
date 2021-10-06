@@ -5,7 +5,7 @@ in {
   xdg.configFile = {
     "npm/npmrc" = {
       text = (builtins.readFile ../../dotfiles/npm/npmrc) + ''
-        prefix="${xdg.dataHome}/npm
+        prefix=${xdg.dataHome}/npm
         # Cache directory for NPM
         cache=${xdg.cacheHome}/npm
         # Cache directory for PNPM
