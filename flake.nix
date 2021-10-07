@@ -24,8 +24,8 @@
       inputs = { nixpkgs.follows = "nixpkgs"; };
     };
 
-    mkNodeModule = {
-      url = "path:/home/hugosum/mkNodeModule";
+    mkNodePackage = {
+      url = "path:/home/hugosum/mkNodePackage";
       inputs = { nixpkgs.follows = "nixpkgs"; };
     };
 
@@ -52,7 +52,7 @@
               nix flake lock --update-input home-manager;
               nix flake lock --update-input dotfiles-manager;
               nix flake lock --update-input xdg;
-              nix flake lock --update-input mkNodeModule;
+              nix flake lock --update-input mkNodePackage;
             '';
           }) { pkgs = inputs.nixpkgs.legacyPackages.${system}; });
       })));

@@ -17,6 +17,8 @@ local function init(paq)
 					note_line = "<leader>nn",
 					wont_fix = "<leader>w",
 					wont_fix_line = "<leader>ww",
+					ref = "<leader>r",
+					ref_line = "<leader>rr",
 				},
 			})
 		end,

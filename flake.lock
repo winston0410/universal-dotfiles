@@ -147,7 +147,7 @@
         "type": "github"
       }
     },
-    "mkNodeModule": {
+    "mkNodePackage": {
       "inputs": {
         "flake-utils": "flake-utils_3",
         "nixpkgs": [
@@ -156,12 +156,12 @@
         "npmlock2nix": "npmlock2nix"
       },
       "locked": {
-        "narHash": "sha256-JEno1GViwlVtXvzFFvgg5ga0H3c4ddHlv78HBxD6WzE=",
-        "path": "/home/hugosum/mkNodeModule",
+        "narHash": "sha256-JxhYtzBLCd5nFlC1dbydzIQ8x/4yq5QBsZGRS747eX0=",
+        "path": "/home/hugosum/mkNodePackage",
         "type": "path"
       },
       "original": {
-        "path": "/home/hugosum/mkNodeModule",
+        "path": "/home/hugosum/mkNodePackage",
         "type": "path"
       }
     },
@@ -235,7 +235,7 @@
         "eww": "eww",
         "flake-utils": "flake-utils_2",
         "home-manager": "home-manager",
-        "mkNodeModule": "mkNodeModule",
+        "mkNodePackage": "mkNodePackage",
         "nixpkgs": "nixpkgs_2",
         "xdg": "xdg"
       }
