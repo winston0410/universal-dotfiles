@@ -50,6 +50,8 @@
         pip = modules.bin.pip;
         cargo = modules.bin.cargo;
         dircolors = modules.misc.dircolors;
+        aws = modules.bin.aws;
+        gh = modules.bin.gh;
       };
 
       namedModules = {

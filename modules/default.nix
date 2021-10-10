@@ -11,6 +11,8 @@
     nushell = import ./shell/nushell.nix;
   };
   bin = {
+    aws = import ./bin/aws.nix;
+    gh = import ./bin/gh.nix;
     himalaya = import ./bin/himalaya.nix;
     neovim = import ./bin/neovim.nix;
     lsp = import ./bin/lsp.nix;
