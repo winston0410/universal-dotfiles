@@ -2,13 +2,13 @@ username:
 { pkgs, ... }:
 
 {
-  nixpkgs.overlays = [
-    (self: super: {
-      nixUnstable = super.nixUnstable.override {
-        patches = [ ../../dotfiles/unset-is-macho.patch ];
-      };
-    })
-  ];
+  # nixpkgs.overlays = [
+    # (self: super: {
+      # nixUnstable = super.nixUnstable.override {
+        # patches = [ ../../dotfiles/unset-is-macho.patch ];
+      # };
+    # })
+  # ];
 
   home-manager.users.${username} = {
     programs.direnv = {

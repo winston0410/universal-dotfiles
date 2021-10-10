@@ -15,7 +15,10 @@
     dev = let 
       system = "x86_64-linux";
     in (inputs.dotfiles-manager.lib.mkProfile {
-      modules = { };
+      modules = {
+        ibus = modules.service.nixos.ibus;
+        openssh = modules.service.nixos.openssh;
+      };
 
       specialArgs = { inherit inputs system; };
 

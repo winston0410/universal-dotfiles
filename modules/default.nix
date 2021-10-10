@@ -55,7 +55,9 @@
       k8s = import ./service/k8s.nix;
       postgres = import ./service/postgres.nix;
       mysql = import ./service/mysql.nix;
+      ibus = import ./service/ibus.nix;
       hydra = import ./service/hydra.nix;
+      openssh = import ./service/openssh.nix;
     };
   };
   # nix-darwin = { minimal = import ./nix-darwin/minimal.nix; };
