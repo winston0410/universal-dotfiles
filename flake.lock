@@ -134,11 +134,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1633733120,
-        "narHash": "sha256-IdUgCn7eud2he4LWZpzFPf1D2u+mjZC09mvo3oSNoss=",
+        "lastModified": 1634230035,
+        "narHash": "sha256-tS0dyWxVgb79Jk8elMthWv/oycj/Q4HHDoNL5V43kz8=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "32285d8fe64138a41f1caed23d94f28529ea4eb4",
+        "rev": "309808afbc2a07e340067f66029a4202b4c4b959",
         "type": "github"
       },
       "original": {
@@ -277,7 +277,7 @@
     },
     "xdg": {
       "locked": {
-        "narHash": "sha256-7mq8eFo6vovgoQqALAwbD6ltViL3Hf9s7kNlqH5e5Ho=",
+        "narHash": "sha256-nEjFBrsbyKSq6KxFfILpAgVynR7fs/IAOotW59KD2hY=",
         "path": "/home/hugosum/xdg.nix",
         "type": "path"
       },

@@ -5,7 +5,7 @@
       isNormalUser = true;
       home = "/home/hugosum";
       extraGroups =
-        [ "wheel" "networkmanager" "docker" "input" "video" "audio" "sound" ];
+        [ "wheel" "networkmanager" "docker" "input" "video" "audio" "sound" "podman" ];
       hashedPassword =
         "$6$pHSJA2UTMz$Z5IS7T6E67bshhmPfcAQRRKgbEuOelR23SiB5Os0YqUqX.oDl5P/nhnKbSAYmiU1mHn01tJ90HD11dYQpg1iN0";
     };
@@ -55,12 +55,13 @@
       };
 
       namedModules = {
-        # pg = modules.service.nixos.postgres;
+        pg = modules.service.nixos.postgres;
         # mysql = modules.service.nixos.mysql;
         eww = modules.bar.eww;
         nix-direnv = modules.bin.nix-direnv;
         xserver = modules.nixos.xserver;
         window-manager = modules.windowManager.leftwm;
+        docker = modules.service.nixos.docker;
       };
     });
   };

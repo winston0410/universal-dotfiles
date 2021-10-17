@@ -189,6 +189,14 @@ local function init(paq)
 				}
 			end
 
+			local function cargofmt()
+				return {
+					exe = "cargo",
+					args = { "fmt" },
+					stdin = false,
+				}
+			end
+
 			local function nixfmt()
 				return {
 					exe = "nixfmt",
@@ -303,7 +311,7 @@ local function init(paq)
 					ruby = { rufo },
 					lua = { stylua },
 					teal = { stylua },
-					rust = { rustfmt },
+					rust = { rustfmt, cargofmt },
 					nix = { nixfmt },
 					-- go = { gofmt, goimports, go_sqlfmt },
 					go = { gofmt, goimports },
@@ -331,7 +339,7 @@ local function init(paq)
 							"--plugin-search-dir=.",
 							"--plugin=plugin-pug",
 						}),
-                        --  Falling back with system plugin
+						--  Falling back with system plugin
 						prettier({
 							"--plugin-search-dir=$XDG_DATA_HOME/prettier",
 							"--plugin=plugin-pug",
