@@ -23,6 +23,7 @@
       specialArgs = { inherit inputs system; };
 
       hmModules = {
+        deploy = modules.bin.deploy;
         dotfiles-manager = inputs.dotfiles-manager.options;
         xdg = inputs.xdg.lib.hm;
         version = modules.misc.version;

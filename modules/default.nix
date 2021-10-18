@@ -12,6 +12,7 @@
   };
   bin = {
     aws = import ./bin/aws.nix;
+    deploy = import ./bin/deploy.nix;
     nixos-generators = import ./bin/nixos-generators.nix;
     gh = import ./bin/gh.nix;
     himalaya = import ./bin/himalaya.nix;

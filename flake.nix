@@ -18,6 +18,11 @@
       url = "github:elkowar/eww/master";
       inputs = { nixpkgs.follows = "nixpkgs"; };
     };
+    
+    deploy-rs = {
+      url = "github:serokell/deploy-rs/master";
+      inputs = { nixpkgs.follows = "nixpkgs"; };
+    };
 
     flake-utils = {
       url = "github:numtide/flake-utils";
