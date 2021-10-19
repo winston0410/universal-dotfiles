@@ -78,6 +78,7 @@
   };
 
   environment.systemPackages = with pkgs; [ git ];
+  environment.defaultPackages = [ ];
 
   system.autoUpgrade = {
     enable = true;
