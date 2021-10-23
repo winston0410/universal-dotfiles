@@ -3,5 +3,9 @@
 {
   home.sessionVariables = { BROWSER = "brave"; };
 
-  home.packages = with pkgs; [ brave ];
+  programs.brave.enable = true;
+
+  programs.brave.extensions = [
+      { id = "nngceckbapebfimnlniiiahkandclblb";}
+  ];
 }
