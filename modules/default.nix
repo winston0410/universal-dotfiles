@@ -62,6 +62,7 @@
       ibus = import ./service/ibus.nix;
       hydra = import ./service/hydra.nix;
       openssh = import ./service/openssh.nix;
+      restic = import ./service/restic.nix;
     };
   };
   # nix-darwin = { minimal = import ./nix-darwin/minimal.nix; };
