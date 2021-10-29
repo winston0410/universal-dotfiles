@@ -5,7 +5,7 @@ let xdg = config.home-manager.users.${username}.xdg;
 in {
   services.postgresql = { 
     enable = true; 
-    authentication = lib.mkForce ''
+    authentication = ''
         local all postgres trust
     '';
   };
