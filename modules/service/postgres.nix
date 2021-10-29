@@ -8,5 +8,6 @@ in {
     authentication = ''
         local all postgres trust
     '';
+    package = pkgs.postgresql_14;
   };
 }
