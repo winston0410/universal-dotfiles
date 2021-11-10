@@ -1,7 +1,6 @@
 local function init(paq)
 	paq({
-		-- "hoob3rt/lualine.nvim",
-		"shadmansaleh/lualine.nvim",
+        'nvim-lualine/lualine.nvim',
 		after = "tokyonight.nvim",
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 		config = function()
