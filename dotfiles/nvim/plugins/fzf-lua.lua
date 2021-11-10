@@ -80,12 +80,12 @@ local function init(use)
 					noremap = true,
 				})
 
-				vim.api.nvim_set_keymap(mode, ",s", "<cmd>lua require('fzf-lua').lsp_document_symbols()<cr>", {
+				vim.api.nvim_set_keymap(mode, ",s", "<cmd>lua require('fzf-lua').lsp_workspace_symbols()<cr>", {
 					silent = true,
 					noremap = true,
 				})
 
-				vim.api.nvim_set_keymap(mode, ",d", "<cmd>lua require('fzf-lua').lsp_document_diagnostics()<cr>", {
+				vim.api.nvim_set_keymap(mode, ",d", "<cmd>lua require('fzf-lua').lsp_workspace_diagnostics()<cr>", {
 					silent = true,
 					noremap = true,
 				})
