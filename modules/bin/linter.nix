@@ -6,7 +6,8 @@
     checkmake
     golint
     goimports
-    hadolint
+    # 2.7.0 is marked broken
+    # hadolint
     shellcheck
     python39Packages.flake8
     python39Packages.yamllint

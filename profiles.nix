@@ -59,7 +59,7 @@
       namedModules = {
         pg = modules.service.nixos.postgres;
         # mysql = modules.service.nixos.mysql;
-        eww = modules.bar.eww;
+        # eww = modules.bar.eww;
         nix-direnv = modules.bin.nix-direnv;
         xserver = modules.nixos.xserver;
         window-manager = modules.windowManager.leftwm;

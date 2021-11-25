@@ -1,6 +1,7 @@
 # Use the same color from my website
 default_border_color = '#feebb3'
 focused_border_color = '#fcbe03'
+floating_border_color = '#fcbe03'
 border_width = 0
 margin = 10
 workspace_margin = 0

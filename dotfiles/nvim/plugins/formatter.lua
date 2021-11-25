@@ -184,7 +184,7 @@ local function init(paq)
 			local function rustfmt()
 				return {
 					exe = "rustfmt",
-					args = { "--emit=stdout" },
+					args = { "--edition=2018", "--emit=stdout" },
 					stdin = true,
 				}
 			end
@@ -311,7 +311,7 @@ local function init(paq)
 					ruby = { rufo },
 					lua = { stylua },
 					teal = { stylua },
-					rust = { rustfmt, cargofmt },
+					rust = { rustfmt },
 					nix = { nixfmt },
 					-- go = { gofmt, goimports, go_sqlfmt },
 					go = { gofmt, goimports },
