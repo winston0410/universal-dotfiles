@@ -3,14 +3,22 @@ username:
 
 {
   #TODO set DOCKER_CONFIG=$XDG_CONFIG_HOME/docker
-  virtualisation.docker.enable = false;
-  virtualisation.podman = {
+  # virtualisation.docker.enable = true;
+  # virtualisation.podman = {
+    # enable = true;
+    # dockerSocket.enable = true;
+    # defaultNetwork.dnsname.enable = true;
+  # };
+  
+  # home-manager.users.${username} = {
+    # home.packages = with pkgs; [ arion docker-client ];
+  # };
+  
+  virtualisation.docker = {
     enable = true;
-    dockerSocket.enable = true;
-    defaultNetwork.dnsname.enable = true;
   };
 
   home-manager.users.${username} = {
-    home.packages = with pkgs; [ arion docker-client ];
+    home.packages = with pkgs; [ arion ];
   };
 }

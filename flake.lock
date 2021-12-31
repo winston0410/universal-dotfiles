@@ -173,11 +173,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1637188941,
-        "narHash": "sha256-4aA5iNVhSDbKjsPeG4n0SvfPQ3sd9ve23b05bVztSq4=",
+        "lastModified": 1640943848,
+        "narHash": "sha256-AXmbspe5EXTr2WsGdtBhFgKtGvzMmPBgqOanFvQq974=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "d85bf67c48f5c64ca39d3d48375e742e16933f4f",
+        "rev": "89bdef7994a20b5285454bf42c7d2b53b98d5754",
         "type": "github"
       },
       "original": {
@@ -196,7 +196,7 @@
         "pnpm2nix": "pnpm2nix"
       },
       "locked": {
-        "narHash": "sha256-mEnHgc0ilRxEZRzCgdRBnK98xn4QhSgtG+GQMqZcM4g=",
+        "narHash": "sha256-x4JQXimtAbsNFJPXozdaAFnh27atOoCndgiw1vV6Mas=",
         "path": "/home/hugosum/mkNodePackage",
         "type": "path"
       },
