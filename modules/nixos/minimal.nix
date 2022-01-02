@@ -70,7 +70,7 @@
 
   programs.light = { enable = true; };
 
-  system.stateVersion = "21.05";
+  system.stateVersion = "21.11";
 
   users = {
     mutableUsers = false;
