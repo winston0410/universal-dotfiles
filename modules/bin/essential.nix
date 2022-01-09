@@ -32,6 +32,8 @@ in {
     xcp
     bottom
     lsd
+    #NOTE Use nix-index to quickly locate package in nixpkgs
+    nix-index
   ];
 
   xdg.configFile = {
