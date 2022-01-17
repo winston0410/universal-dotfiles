@@ -7,6 +7,7 @@ username:
   virtualisation.podman = {
     enable = true;
     dockerSocket.enable = true;
+    dockerCompat = true;
     defaultNetwork.dnsname.enable = true;
   };
   
