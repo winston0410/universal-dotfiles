@@ -1,8 +1,7 @@
 --  Potential issue here when reinstalling
 local function getCwd()
 	local path = require("fzf-lua.path").git_root(vim.loop.cwd(), true) or vim.loop.cwd()
-	local header = ('--header="cwd = %s"'):format(vim.fn.shellescape(path))
-	return { cwd = path, fzf_cli_args = header }
+	return { cwd = path, show_cwd_header = true }
 end
 
 local function searchFiles()
