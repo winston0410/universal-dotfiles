@@ -15,6 +15,7 @@ in {
     };
 
     # Not going to use yarn anymore, but keeping this just in case
+    #FIXME Need to fix package version when installing with yarn
     "yarn/yarnrc" = {
       text = ''
         yarn-offline-mirror "${xdg.cacheHome}/yarn"

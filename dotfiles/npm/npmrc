@@ -1,1 +1,3 @@
 prefer-offline=true
+; REF https://stackoverflow.com/questions/30656189/make-npm-install-save-add-a-strict-version-to-package-json
+save-exact=true
