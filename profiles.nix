@@ -18,7 +18,6 @@
       modules = {
         ibus = modules.service.nixos.ibus;
         openssh = modules.service.nixos.openssh;
-        restic = modules.service.nixos.restic;
       };
 
       specialArgs = { inherit inputs system; };
